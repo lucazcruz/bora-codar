@@ -1,6 +1,6 @@
 <h1 align="center"> Music Player </h1>
 
-![](./music-player/screenshot.png)
+![](./screenshot.png)
 
 ### 🔗 Links
 
