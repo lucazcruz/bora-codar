@@ -4,7 +4,7 @@
 
 ### 🔗 Links
 
-- Live Site URL: [Player Music](https://lucazcruz.github.io/bora-codar-challenges/music-player-main/)
+- Live Site URL: [Player Music](https://lucazcruz.github.io/bora-codar/music-player/)
 
 ## 🚀 Build with
 

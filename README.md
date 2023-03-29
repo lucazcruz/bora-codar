@@ -37,7 +37,7 @@
             <a href="01">Music Player </a>
           </td>
           <td align="center">
-           <a href="https://lucazcruz.github.io/bora-codar-challenges/music-player-main/"><img width="300px" src="./music-player/screenshot.png" /></a>
+           <a href="https://lucazcruz.github.io/bora-codar/music-player/" target="_black"><img width="300px" src="./music-player/screenshot.png" /></a>
           </td>
         </tr>
     </tbody>
