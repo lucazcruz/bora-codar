@@ -1,0 +1,145 @@
+:root {
+  font-size: 62.5%;
+
+  --text-color: #E1E1E6;
+
+  --bg-color-1: #0F0D13;
+  --bg-color-2: #2A2141;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-color-1);
+  font-size: 1.6rem;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: max-content max-content;
+  grid-template-areas: 
+    'A B'
+    'A C';
+}
+
+.player {
+  background: var(--bg-color-2);
+  padding: 3.8rem;
+  width: max-content;
+  border-radius: .9rem;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.9rem;
+}
+
+.music-name {
+  color: var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+  gap: .96rem;
+}
+
+.music-name h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+
+.music-name span {
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.controls {
+  display: flex;
+  gap: 5rem;
+  margin: auto;
+}
+
+.controls img {
+  cursor: pointer;
+}
+
+.track {
+  position: relative;
+  cursor: pointer;
+}
+
+.track::before {
+  content: '';
+  display: block;
+  background: var(--text-color);
+  opacity: .4;
+  height: .6rem;
+  width: 100%;
+  border-radius: .4rem;
+  position: absolute;
+}
+
+.track::after {
+  content: '';
+  display: block;
+  background: var(--text-color);
+  height: .6rem;
+  width: 94%;
+  border-radius: .6rem;
+  position: relative;
+}
+
+.time {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin-top: .96rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color);
+  opacity: .6;
+}
+
+.player-1 { grid-area: A;}
+.player-2 { grid-area: B;}
+.player-3 { grid-area: C;}
+
+.player-2,
+.player-3 {
+  padding: 2.9rem;
+}
+
+.horizontal {
+  display: flex;
+  gap: 2.8rem;
+  align-items: center;
+  width: 300px;
+}
+
+.horizontal img {
+  width: 8.4rem;
+  height: 8.4rem;
+}
+
+@media (max-width: 670px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+  }
+}
