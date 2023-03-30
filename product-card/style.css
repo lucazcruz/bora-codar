@@ -27,6 +27,8 @@ body * {
 
 .product-card {
   display: flex;
+  place-content: center;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -35,8 +37,8 @@ body * {
 }
 
 .product > img {
-  width: 449px;
-  height: 222px;
+  max-width: 449px;
+  max-height: 222px;
   object-fit: cover;
 }
 
