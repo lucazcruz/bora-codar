@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="static">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Sofá Margot II - Rosé</title>
+</head>
+<body>
+
+  <main class="product-card">
+
+    <div class="product">
+      <button id="btn-360" onclick="toggle()">
+        <img src="./assets/360.svg" alt="360-button">
+      </button>
+      <button id="btn-close" onclick="toggle()">
+        <img src="./assets/close.svg" alt="close-button">
+      </button>
+
+      <img id="static" src="./assets/sofa.png" alt="sofá rosé">
+      <img id="animated" src="./assets/sofa.gif" alt="sofá rosé">
+    </div>
+
+    <div class="product-info">
+      <span>código: 42404 </span>
+      <h1>Sofá Margot II - Rosé</h1>
+      <h4>R$ 4.000</h4>
+      <button>adicionar à cesta</button>
+    </div>
+  </main>
+
+  <script>
+    function toggle() {
+      document.documentElement.classList.toggle("static")
+    }
+  </script>
+  
+</body>
+</html>
