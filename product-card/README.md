@@ -4,7 +4,7 @@
 
 ### 🔗 Links
 
-- Live Site URL: [Player Music](https://lucazcruz.github.io/bora-codar/product-card/)
+- Live Site URL: [Product Card](https://lucazcruz.github.io/bora-codar/product-card/)
 
 ## 🚀 Build with
 

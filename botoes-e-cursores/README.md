@@ -4,7 +4,7 @@
 
 ### 🔗 Links
 
-- Live Site URL: [Player Music](https://lucazcruz.github.io/bora-codar/botoes-e-cursores/)
+- Live Site URL: [Botões e Cursores](https://lucazcruz.github.io/bora-codar/botoes-e-cursores/)
 
 ## 🚀 Build with
 
