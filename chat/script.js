@@ -1,28 +1,28 @@
-const send = document.querySelector(".send");
-const messages = document.querySelector("#messages");
+const sendButton = document.querySelector(".send-button");
+const messagesElement = document.querySelector("#messages");
 
-function newBallon(msg) {
+function newMessage(messageText) {
   const div = document.createElement("div");
   div.classList.add("message");
   
   const date = new Date();
   const now = `${date.getHours()}:${date.getMinutes()}`;
-  const past = messages.querySelector(".message:last-child .hora")
+  const previousBalloonTime = messagesElement.querySelector(".message:last-child .hour")
     .innerText.slice(7);
   
-  if (past === now) {
+  if (previousBalloonTime === now) {
     div.innerHTML = `
-      <div class="me">
-        <span class="hora sr-only">Você - ${now}</span>
-        <p class="ballon">${msg}</p>
+      <div class="my-message">
+        <span class="hour sr-only">Você - ${now}</span>
+        <p class="balloon">${messageText}</p>
       </div>
     `;
   } else {
     div.classList.add("mt-30")
     div.innerHTML = `
-      <div class="me">
-        <span class="hora">Você - ${now}</span>
-        <p class="ballon">${msg}</p>
+      <div class="my-message">
+        <span class="hour">Você - ${now}</span>
+        <p class="balloon">${messageText}</p>
       </div>
     `;
   }
@@ -30,15 +30,26 @@ function newBallon(msg) {
   return div;
 }
 
-function sending() {
-  const input = document.querySelector("input");
-  const msg = input.value;
+function scrollBar() {
+  const main = document.querySelector("main");
+  const heightMain = main.scrollHeight;
+
+  main.scrollTo({
+    top: heightMain,
+    behavior: "smooth"
+  });
+}
+
+function toSend() {
+  const input = document.querySelector(".text-input");
+  const messageText = input.value;
   
-  const div = newBallon(msg);
-  messages.appendChild(div);
+  const div = newMessage(messageText);
+  messagesElement.appendChild(div);
 
   input.value = '';
   input.focus();
+  scrollBar();
 }
 
-send.addEventListener("click", sending);
+sendButton.addEventListener("click", toSend);
