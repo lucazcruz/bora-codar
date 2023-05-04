@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #E1E1E6;
+  background: #1A1924;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.chat {
+  margin-top: 80px;
+  padding: 24px 32px;
+  max-width: 880px;
+}
+
+.perfil {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+
+.contact-name {
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.status {
+  color: #00b37e;
+  font-size: 12px;
+  line-height: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status::before {
+  content: '';
+  display: inline-block;
+  background: #00b37e;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 311px;
+  margin-bottom: 26px;
+}
+
+.close {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+main {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+}
+
+.message {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start
+}
+
+.message span {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.ballon {
+  background: #633BBC;
+  border-radius: 0 8px 8px;
+  margin-top: 10px;
+  padding: 14px;
+
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.me {
+  grid-column: 2;
+  justify-self: end;
+}
+
+.me span {
+  display: block;
+  text-align: end;
+}
+
+.me p {
+  background: #07847E;
+  border-radius: 8px 8px 0;
+}
+
+footer {
+  margin-top: 54px;
+  display: grid;
+  position: relative;
+}
+
+input {
+  background: #282843;
+  color: #E1E1E6;
+  border: none;
+  border-radius: 999px;
+  padding: 19px 24px;
+
+  font-size: 12px;
+  line-height: 14px;
+}
+
+input::placeholder {
+  color: #e1e1e6;
+}
+
+.send {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 24px;
+  top: 14px;
+  cursor: pointer;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+

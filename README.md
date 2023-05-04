@@ -58,5 +58,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/botoes-e-cursores/"><img width="300px" src="./botoes-e-cursores/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>04</td>
+          <td>
+            <a href="chat">Chat</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/chat/"><img width="300px" src="./chat/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
