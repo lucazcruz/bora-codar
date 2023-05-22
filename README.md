@@ -67,5 +67,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/chat/"><img width="300px" src="./chat/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>05</td>
+          <td>
+            <a href="calculator">Calculator</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/calculator/"><img width="300px" src="./calculator/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>

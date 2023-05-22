@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  background: $gradient-bg;
+  color: $neutral-color;
+  font-family: 'Rubik', sans-serif;
+
+  min-height: 100vh;
+  @include flexCenter;
+}
+
+button {
+  color: $neutral-color;
+  border: none;
+  cursor: pointer;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  @include flexCenter;
+
+  &:first-child {
+    color: $primary-color;
+  }
+  &:last-child {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #7F45E2;
+    &:hover {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #8f4fff;
+    }
+  }
+}
+
+.black-button {
+  @include blackButton;
+  &:hover {
+    @include blackButton(#393546, 0.2);
+  }
+}
+
+.purple-button {
+  @include purpleButton;
+  &:hover {
+    @include purpleButton(#5c3a94, 0.24)
+  }
+}
+
+.calculator {
+  border-radius: 48px;
+  max-width: 356px;
+  padding: 54px 32px 32px;
+
+  background: #2D2A37;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04), 0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26), 0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1), inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+
+  .display {
+    padding: 0 22px;
+    margin-bottom: 26px;
+    .calculo {
+      display: block;
+      text-align: right;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.02em;
+      color: #6B6B6B;
+      margin-bottom: 8px;
+    }
+  
+    .result-display {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      font-size: 36px;
+      line-height: 140%;
+      letter-spacing: -0.02em;
+      color: #EBEBEB;
+    }
+  }
+  
+  .teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+}

@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  background: linear-gradient(180deg, #807ECE 0%, #8E7ECE 100%);
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:first-child {
+  color: rgb(151, 93, 250);
+}
+button:last-child {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #7F45E2;
+}
+button:last-child:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #8f4fff;
+}
+
+.black-button {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2D2A37;
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+}
+.black-button:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #393546;
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.2);
+}
+
+.purple-button {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #462878;
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+}
+.purple-button:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #5c3a94;
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.24);
+}
+
+.calculator {
+  border-radius: 48px;
+  max-width: 356px;
+  padding: 54px 32px 32px;
+  background: #2D2A37;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04), 0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26), 0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1), inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+}
+.calculator .display {
+  padding: 0 22px;
+  margin-bottom: 26px;
+}
+.calculator .display .calculo {
+  display: block;
+  text-align: right;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #6B6B6B;
+  margin-bottom: 8px;
+}
+.calculator .display .result-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 36px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #EBEBEB;
+}
+.calculator .teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
