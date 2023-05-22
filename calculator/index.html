@@ -16,40 +16,56 @@
   <div id="app">
     <div class="calculator">
       <div class="display">
-        <span class="calculo">1 + 1</span>
+        <span class="calculo"></span>
         <div class="result-display">
           <span><img src="./assets/equals-small.svg" alt="equals"></span>
-          <span class="result">2</span>
+          <span class="result">0</span>
         </div>
       </div>
 
       <div class="teclado">
-        <button class="black-button">CE</button>
-        <button class="black-button">C</button>
-        <button class="black-button"><img src="./assets/percent.svg" alt="percent symbol"></button>
-        <button class="purple-button"><img src="./assets/divide.svg" alt="divide symbol"></button>
+        <button class="black-button" onclick="clearDisplay()" >CE</button>
+        <button class="black-button" onclick="backspace()" >C</button>
+        <button class="black-button" onclick="display('%')" >
+          <img src="./assets/percent.svg" alt="percent symbol">
+        </button>
+        <button class="purple-button" onclick="display('/')" >
+          <img src="./assets/divide.svg" alt="divide symbol">
+        </button>
 
-        <button class="black-button">7</button>
-        <button class="black-button">8</button>
-        <button class="black-button">9</button>
-        <button class="purple-button"><img src="./assets/x.svg" alt="multiplication symbol"></button>
+        <button class="black-button" onclick="display(7)" >7</button>
+        <button class="black-button" onclick="display(8)" >8</button>
+        <button class="black-button" onclick="display(9)" >9</button>
+        <button class="purple-button" onclick="display('*')" >
+          <img src="./assets/x.svg" alt="multiplication symbol">
+        </button>
 
-        <button class="black-button">4</button>
-        <button class="black-button">5</button>
-        <button class="black-button">6</button>
-        <button class="purple-button"><img src="./assets/minus.svg" alt="minus symbol"></button>
+        <button class="black-button" onclick="display(4)" >4</button>
+        <button class="black-button" onclick="display(5)" >5</button>
+        <button class="black-button" onclick="display(6)" >6</button>
+        <button class="purple-button" onclick="display('-')" >
+          <img src="./assets/minus.svg" alt="minus symbol">
+        </button>
 
-        <button class="black-button">1</button>
-        <button class="black-button">2</button>
-        <button class="black-button">3</button>
-        <button class="purple-button"><img src="./assets/plus.svg" alt="plus symbol"></button>
+        <button class="black-button" onclick="display(1)" >1</button>
+        <button class="black-button" onclick="display(2)" >2</button>
+        <button class="black-button" onclick="display(3)" >3</button>
+        <button class="purple-button" onclick="display('+')" >
+          <img src="./assets/plus.svg" alt="plus symbol">
+        </button>
 
-        <button class="black-button"><img src="./assets/plus-minus.svg" alt="plus-minus symbol"></button>
-        <button class="black-button">0</button>
-        <button class="black-button">,</button>
-        <button class="purple-button"><img src="./assets/equals.svg" alt="equals symbol"></button>
+        <button class="black-button">
+          <img src="./assets/plus-minus.svg" alt="plus-minus symbol">
+        </button>
+        <button class="black-button" onclick="display(0)" >0</button>
+        <button class="black-button" onclick="display('.')" >.</button>
+        <button class="purple-button" id="equals" onclick="calculate()" >
+          <img src="./assets/equals.svg" alt="equals symbol">
+        </button>
       </div>
     </div>
   </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
