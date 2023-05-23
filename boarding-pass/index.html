@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Boarding Pass</title>
+</head>
+<body>
+  <div id="app">
+    <div class="boarding-pass">
+      <div class="flight-info border-bottom">
+        <div class="container mb-24">
+          <div>
+            <span class="font-s">voo</span>
+            <b class="font-m-500">R$995</b>
+          </div>
+          <div>
+            <span class="font-s align-right">data</span>
+            <b class="font-m-500">23/05/2023</b>
+          </div>
+        </div>
+        <div class="container">
+          <div>
+            <span class="font-s">São Paulo, Brasil</span>
+            <b class="font-l">GRU</b>
+            <span class="font-m">17:00</span>
+          </div>
+          <div class="align-right">
+            <span class="font-s">São Fransisco, EUA</span>
+            <b class="font-l">SFO</b>
+            <span class="font-m">04:48 <sup class="font-ss">+1</sup></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="passenger-info container border-bottom">
+        <div>
+          <span class="font-s">Passageiro</span>
+          <b class="font-m-500">Lucas Cruz</b>
+        </div>
+        <div class="align-right">
+          <span class="font-s">Assento</span>
+          <b class="font-m-500">28A</b>
+        </div>
+      </div>
+
+      <div class="boarding-info">
+        <div class="container mb-24 flex-center">
+          <div class="gap-16">
+            <div>
+              <span class="font-s">Embarque</span>
+              <span  class="font-m-500 destaque">16:15</span>
+            </div>
+            <div>
+              <span class="font-s">Terminal</span>
+              <b  class="font-m-500">2</b>
+            </div>
+            <div>
+              <span class="font-s">Portão</span>
+              <b  class="font-m-500">15</b>
+            </div>
+          </div>
+          <div class="qr-code">
+            <div class="image">
+              <img src="./img/qr-codesvg.svg" alt="qr-code">
+            </div>
+            <span class="font-s ml-10">Grupo de embarque: 3</span>
+          </div>
+        </div>
+        <span class="font-m align-center"><b>Atenção:</b> o portão fecha 16:45</span>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

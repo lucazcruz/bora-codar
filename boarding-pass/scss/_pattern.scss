@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.border-bottom {
+  border-bottom: 1px dashed rgba(100, 59, 188, 0.3);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.gap-16 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.font-ss {
+  @include font(ss);
+}
+
+.font-s {
+ @include font(s);
+}
+
+.font-m {
+  @include font(m);
+}
+
+.font-m-500 {
+  @include font(m-500);
+}
+
+.font-l {
+  @include font(l);
+}
+
+.destaque {
+  padding: 4px 8px;
+  width: 54px;
+  height: 27px;
+  background: #633BBC;
+  border-radius: 8px;
+  color: #ffffff;
+}

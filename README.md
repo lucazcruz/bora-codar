@@ -76,5 +76,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/calculator/"><img width="300px" src="./calculator/screenshot.png" /></a>
           </td>
         </tr>
+         <tr>
+          <td>06</td>
+          <td>
+            <a href="boarding-pass">Boarding Pass</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/boarding-pass/"><img width="300px" src="./boarding-pass/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>

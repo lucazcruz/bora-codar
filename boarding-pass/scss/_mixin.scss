@@ -1,0 +1,32 @@
+@mixin font($type) {
+  @if $type == "ss" {
+    font-size: 10px;
+    line-height: 12px;
+    
+  } @else if $type == "s" {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.64);
+
+  } @else if $type == "m" {
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+    letter-spacing: -0.02em;  
+    color: rgba(0, 0, 0, 0.8);
+
+  } @else if $type == "m-500" {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.88);
+
+  } @else if $type == "l" {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.88);
+  }
+}
