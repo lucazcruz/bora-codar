@@ -29,11 +29,9 @@ export default class FetchCards {
 
   filterJson(response) {
     let filterText = '';
-    let filterState = '';
-    if (this.searchValue && this.stateValue) {
-      filterText = this.searchValue.toLowerCase();
-      filterState = this.stateValue;
-    } 
+    let filterState = this.stateValue;
+
+    if (this.searchValue) filterText = this.searchValue.toLowerCase();
 
     const filteredJson = response.filter(card => {
       const title = card.title.toLowerCase();
