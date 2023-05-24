@@ -29,7 +29,7 @@ export default class FetchCards {
 
   filterJson(response) {
     let filterText = '';
-    let filterState = this.stateValue;
+    let filterState = String(this.stateValue);
 
     if (this.searchValue) filterText = this.searchValue.toLowerCase();
 
