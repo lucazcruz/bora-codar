@@ -1,0 +1,115 @@
+@media screen and (max-width: 1024px) {
+  .content-search {
+    padding: 2rem;
+    max-width: 99.3rem;
+    margin: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {  
+  .content-search .button {
+    padding: .8rem 2.4rem;
+  }
+
+  .content-search #search {
+    padding: 0.8rem .8rem 0.8rem 4.2rem;
+  }
+
+  .content-search select {
+    padding: 0.8rem 4.4rem 0.8rem 4.2rem;
+  }
+
+  .content-search label[for="state"] .location-icon {
+    left: .8rem;
+    top: .4rem;
+  }
+  
+  .content-search label[for="state"] .chevron-icon {
+    right: .8rem;
+    top: .4rem;
+  }
+
+  .content-search label[for="search"] img{
+    position: absolute;
+    left: .8rem;
+    top: .4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    background-size: 30rem;
+    margin-bottom: 5rem;
+  }
+
+  .hero h1 {
+    max-width: 42.7rem;
+    font-size: 3.2rem;
+  }
+
+  .content-search {
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    border-radius: 0;
+
+    padding-top: 60px;
+    max-width: 380px;
+    margin: 0;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
+
+    display: none;
+  }
+
+  .cortina {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+
+    display: none;
+  }
+
+  .content-search.on {
+    display: flex;
+  }
+  .cortina.on {
+    display: initial;
+  }
+  .button.menu.on {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 15px;
+  }
+
+  .content h2 {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 500px)  {
+  html {
+    font-size: 50%;
+  }
+
+  .hero {
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    padding: 0 1.5rem;
+  }
+
+  .content .flex {
+    gap: .8rem;
+  }
+
+}

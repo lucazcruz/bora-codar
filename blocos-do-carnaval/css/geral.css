@@ -5,6 +5,10 @@
   font-family: 'Roboto';
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   background: #FFFFFE;
 }
@@ -15,7 +19,7 @@ img {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 144rem;
   margin: 0 auto;
 }
 
@@ -24,21 +28,28 @@ span.purple {
 }
 
 .button {
-  border: none;
   cursor: pointer;
-  padding: 12px 32px;
+  border: none;
   background: #6246EA;
-  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 1.2rem 3.2rem;
+  border-radius: .5rem;
 
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
   text-transform: uppercase;
-  color: #FFFFFF;
+  white-space: nowrap;
   transition: .3s;
+  
 }
 
 .button:hover {
   background: #4d2eeb;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button.menu {
+  padding: .6rem 1.2rem;
+  display: none;
 }

@@ -1,5 +1,6 @@
 .content {
-  max-width: 1216px;
+  max-width: 124.6rem;
+  padding: 0rem 1.5rem;
   margin: 0 auto;
   animation: show-content ease .6s;
 }
@@ -18,15 +19,17 @@
 .content .flex {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+  margin-bottom: 4rem;
 }
 
 .button-select .button.on{
-  padding: 4px 24px;
+  padding: .4rem 2.4rem;
 }
 
 .button-select .button.off {
-  padding: 4px 24px;
+  padding: .4rem 2.4rem;
   background: #ffffff;
   color: #6246EA;
 }
@@ -37,25 +40,30 @@
 }
 
 .content h2 {
-  font-size: 32px;
+  font-size: 3.2rem;
   line-height: 140%;
   text-align: center;
   color: #121214;
 }
 
-.content .grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-bottom: 100px;
+.content #flex-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.2rem;
+  
+  margin-bottom: 10rem;
 }
 
 .card {
   background: #FFFFFF;
   border: 1px solid #EAEAEA;
   overflow: hidden;
-  border-radius: 10px;
-  max-width: 384px;
+  border-radius: 1rem;
+  max-width: 38.4rem;
+
+  flex-grow: 1;
+  flex-basis: 30rem;
   align-self: start;
   cursor: pointer;
   transition: transform .3s;
@@ -65,7 +73,7 @@
 @keyframes show-card {
   from {
     opacity: 0;
-    transform: scale(.01);
+    transform: scale(0.1);
   }
   to {
     opacity: 1;
@@ -79,30 +87,30 @@
 
 .card .image {
   height: 100%;
-  max-height: 153px;
+  max-height: 15.3rem;
 }
 
 .card .info {
-  padding: 16px;
+  padding: 1.6rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.6rem;
 }
 
 .card h3 {
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 140%;
   color: #121214;
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 160%;
   color: rgba(0, 0, 0, 0.75);
 }
 
 .card span {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 160%;
   color: rgba(0, 0, 0, 0.75);
 }
@@ -110,5 +118,5 @@
 .card .location {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: .8rem;
 }
