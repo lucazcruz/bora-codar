@@ -83,19 +83,19 @@
   color: #7C7C8A;
 }
 
-.hero form label[for="city"] {
+.hero form label[for="state"] {
   width: 100%;
   max-width: 348px;
   position: relative;
 }
 
-.hero form label[for="city"] .location-icon {
+.hero form label[for="state"] .location-icon {
   position: absolute;
   left: 14px;
   top: 12px;
 }
 
-.hero form label[for="city"] .chevron-icon {
+.hero form label[for="state"] .chevron-icon {
   position: absolute;
   right: 8px;
   top: 12px;

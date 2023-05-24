@@ -17,15 +17,15 @@
       <section class="hero">
         <p>FIND YOUR BLOCK</p>
         <h1>Encontre os <span class="purple">melhores blocos</span> de carnaval de 2023</h1>
-        <form class="content-search">
+        <form class="content-search" id="form">
           <label for="search">
             <img src="./assets/search.svg" alt="location icon">
             <input type="search" name="search" id="search" placeholder="Pesquise por nome">
           </label>
           
-          <label for="city">
+          <label for="state">
             <img src="./assets/location.svg" alt="location icon" class="location-icon">
-            <select name="city" id="city">
+            <select name="state" id="state">
               <option selected value="undefined">Selecione um estado</option>
               <option value="BA">Bahia - BA</option>
               <option value="SP">São Paulo - SP</option>
@@ -49,14 +49,11 @@
           </div>
         </div>
 
-        <div class="grid">
-
-
-        </div>
+        <div class="grid" id="grid-content"></div>
       </section>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="./js/script.js" type="module"></script>
 </body>
 </html>
