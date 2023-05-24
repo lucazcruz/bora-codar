@@ -76,13 +76,22 @@
            <a href="https://lucazcruz.github.io/bora-codar/calculator/"><img width="300px" src="./calculator/screenshot.png" /></a>
           </td>
         </tr>
-         <tr>
+        <tr>
           <td>06</td>
           <td>
             <a href="boarding-pass">Boarding Pass</a>
           </td>
           <td align="center">
            <a href="https://lucazcruz.github.io/bora-codar/boarding-pass/"><img width="300px" src="./boarding-pass/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td>
+            <a href="blocos-do-carnaval">Blocos do Carnaval</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/blocos-do-carnaval/"><img width="300px" src="./blocos-do-carnaval/screenshot.png" /></a>
           </td>
         </tr>
     </tbody>

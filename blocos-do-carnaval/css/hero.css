@@ -1,0 +1,105 @@
+
+.hero {
+  background: url('../assets/ilustra-01.png') no-repeat,
+              url('../assets/ilustra-02.png') no-repeat right bottom;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+
+  animation: show-hero ease .6s;
+}
+
+.hero p {
+  margin-bottom: 18px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.1em;
+  color: #E45858;
+  text-align: center;
+}
+
+.hero h1 {
+  max-width: 647px;
+  font-size: 48px;
+  margin: 0 auto;
+  line-height: 125%;
+  text-align: center;
+  color: #121214;
+
+  margin-bottom: 40px;
+}
+
+.hero form {
+  padding: 40px;
+  background: #fff;
+  max-width: 993px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  gap: 24px;
+}
+
+.hero form label[for="search"] {
+  width: 100%;
+  max-width: 348px;
+  position: relative;
+}
+
+.hero form label[for="search"] img{
+  position: absolute;
+  left: 14px;
+  top: 12px;
+}
+
+.hero form #search {
+  border: none;
+  background: #F4F4FF;
+  padding: 16px 0px;
+  border-radius: 5px;
+
+  font-size: 16px;
+  line-height: 100%;
+  color: #121214;
+  width: 100%;
+
+  padding: 16px 8px 16px 50px;
+}
+
+.hero form #search::placeholder {
+  color: #7C7C8A;
+}
+
+.hero form label[for="city"] {
+  width: 100%;
+  max-width: 348px;
+  position: relative;
+}
+
+.hero form label[for="city"] .location-icon {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+}
+
+.hero form label[for="city"] .chevron-icon {
+  position: absolute;
+  right: 8px;
+  top: 12px;
+}
+
+.hero form select {
+  appearance: none;
+  background: #F4F4F4;
+  border: none;
+  border-radius: 5px;
+  padding: 16px 44px 16px 50px;
+  width: 100%;
+  cursor: pointer;
+
+  font-size: 16px;
+  line-height: 100%;
+  color: #7C7C8A;
+}

@@ -1,0 +1,92 @@
+.content {
+  max-width: 1216px;
+  margin: 0 auto;
+  animation: show-content ease .6s;
+}
+
+.content .flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.button-select .button.on{
+  padding: 4px 24px;
+}
+
+.button-select .button.off {
+  padding: 4px 24px;
+  background: #ffffff;
+  color: #6246EA;
+}
+
+.button-select .button.off:hover {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  color: #5031e9;
+}
+
+.content h2 {
+  font-size: 32px;
+  line-height: 140%;
+  text-align: center;
+  color: #121214;
+}
+
+.content .grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 100px;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 384px;
+  align-self: start;
+  cursor: pointer;
+  transition: transform .3s;
+  animation: show-card ease .6s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card .image {
+  height: 100%;
+  max-height: 153px;
+}
+
+.card .info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card h3 {
+  font-size: 20px;
+  line-height: 140%;
+  color: #121214;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.card span {
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.card .location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

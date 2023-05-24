@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Blocos do Carnaval</title>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <section class="hero">
+        <p>FIND YOUR BLOCK</p>
+        <h1>Encontre os <span class="purple">melhores blocos</span> de carnaval de 2023</h1>
+        <form class="content-search">
+          <label for="search">
+            <img src="./assets/search.svg" alt="location icon">
+            <input type="search" name="search" id="search" placeholder="Pesquise por nome">
+          </label>
+          
+          <label for="city">
+            <img src="./assets/location.svg" alt="location icon" class="location-icon">
+            <select name="city" id="city">
+              <option selected value="undefined">Selecione um estado</option>
+              <option value="BA">Bahia - BA</option>
+              <option value="SP">São Paulo - SP</option>
+              <option value="RJ">Rio de Janeiro - RJ</option>
+              <option value="RS">Rio Grande do Sul - RS</option>
+              <option value="SC">Santa Catarina - SC</option>
+            </select>
+            <img src="./assets/chevron-down.svg" alt="chevron-down icon" class="chevron-icon">
+          </label>
+
+          <button class="button">Buscar agora</button>
+        </form>
+      </section>
+
+      <section class="content">
+        <div class="flex">
+          <h2>Blocos recomendados</h2>
+          <div class="button-select">
+            <button class="button on">Lista</button>
+            <button class="button off">Mapa</button>
+          </div>
+        </div>
+
+        <div class="grid">
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
