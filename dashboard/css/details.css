@@ -1,0 +1,21 @@
+.before-purple::before {
+  background: linear-gradient(121.94deg, #CE9FFC 15.98%, #7367F0 82.85%);
+}
+
+.before-pink::before {
+  background: linear-gradient(121.94deg, #DF9780 15.98%, #A66DE9 82.85%);
+}
+
+.plus::before,
+.minus::before {
+  content: '';
+  display: inline-block;
+  background: url('../assets/polygon-plus.svg') no-repeat;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: .4rem;
+}
+
+.minus:before {
+  background: url('../assets/polygon-minus.svg') no-repeat;
+}

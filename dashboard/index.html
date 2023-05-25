@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  <div id="app">
+    <section class="dashboard">
+      <div class="box-1">
+        <div class="card">
+          <h3>NPS geral</h3>
+          <div class="status">
+            <img src="./assets/img1.png" alt="">
+            <span>exelente!</span>
+          </div>
+          <span>NPS Score 75</span>
+        </div>
+  
+        <div class="card">
+          <h3>Vendas fechadas</h3>
+          
+          <div class="circle-bar">
+            <div class="inner">
+              <h3>70%</h3>
+              <span>alcançada</span>
+            </div>
+
+            <svg width="197" height="197" xmlns="https://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="linearGradient">
+                  <stop offset="0%" stop-color="#7367F0" />
+                  <stop offset="100%" stop-color="#CE9FFC" />
+                </linearGradient>
+              </defs>
+              <circle cx="98.5" cy="98.5" r="83.5" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="meta-info">
+            <div class="info">
+              <span class="before-neutral">Esperado</span>
+              <span class="meta">100</span>
+            </div>
+            <div class="info">
+              <span class="before-purple">Alcançado</span>
+              <span class="make">70</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card">
+          <h3>Meta mensal</h3>
+
+          <div class="circle-bar pink">
+            <div class="inner">
+              <h3>90%</h3>
+              <span>alcançada</span>
+            </div>
+
+            <svg width="197" height="197" xmlns="https://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="linearGradientPink">
+                  <stop offset="0%" stop-color="#DF9780" />
+                  <stop offset="100%" stop-color="#A66DE9" />
+                </linearGradient>
+              </defs>
+              <circle cx="98.5" cy="98.5" r="83.5" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="meta-info">
+            <div class="info">
+              <span class="before-neutral">Esperado</span>
+              <span class="meta">R$ 70K</span>
+            </div>
+            <div class="info">
+              <span class="before-pink">Alcançado</span>
+              <span class="make">R$ 63K</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-2">
+        <h3>Vendas por dia da semana</h3>
+        <div class="weekly-sales">
+          <div class="sales">
+            <div>
+              <span class="plus">Dia com mais vendas</span>
+              <p>quarta-feira</p>
+            </div>
+            <div>
+              <span class="minus">Dia com menos vendas</span>
+              <p>domingo</p>
+            </div>
+          </div>
+
+          <ul class="bar-graphs">
+            <li>
+              <span class="bar"></span>
+              <span>dom</span>
+            </li>
+            <li>
+              <span class="bar"></span>
+              <span>seg</span>
+            </li>
+            <li>
+              <span class="bar"></span>
+              <span>ter</span>
+            </li>
+            <li>
+              <span class="bar"></span>
+              <span>qua</span>
+            </li>
+            <li>
+              <span class="bar"></span>
+              <span>qui</span>
+            </li>
+            <li>
+              <span class="bar"></span>
+              <span>sex</span>
+            </li>
+            <li>
+              <span class="bar"></span>
+              <span>sab</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

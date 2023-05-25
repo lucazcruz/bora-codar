@@ -1,0 +1,156 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#app {
+  font-family: 'Inter';
+  background: #292738;
+  color: #ffffff;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard {
+  max-width: 115rem;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.dashboard h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 160%;
+}
+
+.dashboard span {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 160%;
+
+  display: flex;
+  align-items: center;
+}
+
+.box-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 3rem 4.8rem;
+  min-width: 29.6rem;
+  max-width: 41rem;
+
+  flex-grow: 1;
+
+  background: #363447;
+  box-shadow: 3rem .4rem 2.6rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.6rem;
+}
+
+.card .status {
+  margin: 3.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.card .status span {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 160%;
+  color: #81FBB8;
+}
+
+.card .meta-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card .meta-info .info {
+  display: flex;
+  gap: 1rem;
+}
+
+.before-neutral::before,
+.before-purple::before,
+.before-pink::before {
+  content: '';
+  background: #4A4556;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: .4rem;
+}
+
+.box-2  {
+  padding: 2.9rem 4.8rem;
+  gap: 3.2rem;
+  background: #363447;
+  box-shadow: .3rem 4px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 1.6rem;
+}
+
+.weekly-sales {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+  margin-top: 3.2rem;
+}
+
+.weekly-sales .sales {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3.2rem;
+}
+
+.weekly-sales .sales p {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 160%;
+  margin-top: .8rem;
+}
+
+@media (max-width: 1144px) {
+  .dashboard {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
+  .card {
+    padding: 2.4rem;
+  }
+}
+
+@media (max-width: 854px) {
+  .dashboard {
+    align-items: center;
+  }
+}

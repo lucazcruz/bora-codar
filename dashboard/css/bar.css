@@ -1,0 +1,91 @@
+
+.circle-bar {
+  margin: 3.2rem 0;
+  width: 19.7rem;
+  height: 19.7rem;
+  border-radius: 50%;
+  background: rgba(217, 217, 217, 0.1);
+  position: relative;
+  transform: rotate(-85deg);
+}
+
+.circle-bar .inner {
+  background: #363447;
+  width: 13.7rem;
+  height: 13.7rem;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  transform: rotate(85deg)
+}
+
+.circle-bar .inner h3 {
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 100%;
+}
+
+.circle-bar .inner span {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.circle-bar circle {
+  fill: none;
+  stroke: url(#linearGradient);
+  stroke-width: 3rem;
+  stroke-dasharray: 510;
+  stroke-dashoffset: 510;
+  animation: purple 2s forwards;
+}
+
+@keyframes purple {
+  100% {
+    stroke-dashoffset: 153;
+  }
+}
+
+.circle-bar.pink circle {
+  stroke: url(#linearGradientPink);
+  animation: pink 2s forwards;
+}
+
+@keyframes pink {
+  100% {
+    stroke-dashoffset: 51;
+  }
+}
+
+
+.bar-graphs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  list-style: none;
+  width: 100%;
+  max-width: 52.3rem;
+}
+
+.bar-graphs li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.bar-graphs .bar {
+  display: block;
+  width: 1.5rem;
+  height: 14.2rem;
+  background: linear-gradient(180deg, #90F7EC 0%, #32CCBC 100%);
+  border-radius: 99.9rem;
+}
