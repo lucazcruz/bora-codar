@@ -70,9 +70,27 @@
 
 
 .bar-graphs .bar {
+  cursor: pointer;
   display: block;
   width: 1.5rem;
-  height: 14.2rem;
   background: linear-gradient(180deg, #90F7EC 0%, #32CCBC 100%);
   border-radius: 99.9rem;
+
+  position: relative;
+}
+
+.bar-graphs .bar-value {
+  position: absolute;
+  top: -25px;
+  left: -2px;
+
+  color: #32CCBC;
+  font-weight: 600;
+
+  opacity: 0;
+  transition: .3s;
+}
+
+.bar-graphs .bar-value.on {
+  opacity: 1;
 }

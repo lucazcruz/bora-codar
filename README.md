@@ -94,5 +94,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/blocos-do-carnaval/"><img width="300px" src="./blocos-do-carnaval/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>08</td>
+          <td>
+            <a href="Dashboard">Dashboard</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/dashboard/"><img width="300px" src="./dashboard/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
