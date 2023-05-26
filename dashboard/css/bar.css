@@ -46,23 +46,10 @@
   animation: purple 2s forwards;
 }
 
-@keyframes purple {
-  100% {
-    stroke-dashoffset: 153;
-  }
-}
-
 .circle-bar.pink circle {
   stroke: url(#linearGradientPink);
   animation: pink 2s forwards;
 }
-
-@keyframes pink {
-  100% {
-    stroke-dashoffset: 51;
-  }
-}
-
 
 .bar-graphs {
   display: flex;
