@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <title>Conversor de Moedas</title>
+</head>
+<body>
+  <div id="app">
+    <main>
+      <section class="conversor">
+        <h2>Conversor de moedas</h2>
+        <div class="wrapper">
+          <div class="money-wrapper">
+            <input type="text" value="$ 5.0">
+
+            <img src="./assets/divider.svg" alt="divider">
+
+            <div class="dropdown">
+              <div class="selected">
+                <img src="./assets/usd.png" alt="">
+                <span>USD</span>
+                <img src="./assets/chevron-down.svg" alt="">
+              </div>
+
+              <ul>
+                <li>
+                  <img src="./assets/eur.png" alt="">  
+                  EUR
+                </li>
+                <li>
+                  <img src="./assets/usd.png" alt="">
+                  USD
+                </li>
+                <li>
+                  <img src="./assets/gbp.png" alt="">
+                  GBP
+                </li>
+                <li>
+                  <img src="./assets/chf.png" alt="">
+                  CHF
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="middle">
+            <img src="./assets/arrows-exchange.svg" alt="exchange icon">
+          </div>
+          <div class="money-wrapper">
+            <input type="text" value="$ 1.000">
+
+            <img src="./assets/divider.svg" alt="divider">
+
+            <div class="dropdown">
+              <div class="selected">
+                <img src="./assets/brl.png" alt="">
+                <span>BRL</span>
+                <img src="./assets/chevron-down.svg" alt="">
+              </div>
+
+              <ul>
+                <li>
+                  <img src="./assets/eur.png" alt="">  
+                  EUR
+                </li>
+                <li>
+                  <img src="./assets/usd.png" alt="">
+                  USD
+                </li>
+                <li>
+                  <img src="./assets/gbp.png" alt="">
+                  GBP
+                </li>
+                <li>
+                  <img src="./assets/chf.png" alt="">
+                  CHF
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="cambio">
+        <h2>Taxa de câmbio</h2>
+        <div id="chart"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
