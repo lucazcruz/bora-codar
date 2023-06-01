@@ -103,5 +103,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/dashboard/"><img width="300px" src="./dashboard/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>09</td>
+          <td>
+            <a href="conversor-de-moedas">Conversor de Moedas</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/conversor-de-moedas/"><img width="300px" src="./conversor-de-moedas/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
