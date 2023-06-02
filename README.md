@@ -112,5 +112,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/conversor-de-moedas/"><img width="300px" src="./conversor-de-moedas/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>10</td>
+          <td>
+            <a href="pagina-de-clima">Página de Clima</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/pagina-de-clima/"><img width="300px" src="./pagina-de-clima/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
