@@ -1,0 +1,148 @@
+:root {
+  --white: #ffffff;
+  --gray-200: #E2E8F0;
+  --gray-400: #94A3B8;
+  --gray-600: #475569;
+  --gray-800: #1E293B;
+  --purple: #7C3AED;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 5.5rem;
+  color: var(--gray-800);
+  margin-bottom: 1.6rem;
+}
+
+p {
+  line-height: 2.4rem;
+  color: var(--gray-600);
+  margin-bottom: 4.0rem;
+}
+
+button {
+  border: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--white);
+  background: var(--purple);
+  border-radius: .4rem;
+  padding: 1.6rem 2.4rem;
+}
+
+main {
+  width: 100%;
+  max-width: 144.0rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2.0rem;
+}
+
+.content {
+  padding: 4.0rem 0 0 11.2rem;
+}
+
+.logo {
+  margin-bottom: 11.4rem;
+}
+
+.form-content {
+  max-width: 38.4rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.form .inputs > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .inputs div + div {
+  margin-top: 1.6rem;
+}
+
+.form label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: var(--gray-800);
+  margin-bottom: .8rem;
+}
+
+.form .forget-password {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form .forget-password a {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+.form input {
+  border: 1px solid var(--gray-200);
+  border-radius: .4rem;
+  padding: 1.6rem 1.2rem;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  outline: none;
+  color: var(--gray-800);
+
+}
+
+.form input:focus,
+.form input:enabled:hover {
+  border-color: var(--purple);
+}
+
+.form input::placeholder {
+  color: var(--gray-400);
+}
+
+.form input:disabled {
+  color: var(--gray-800);
+  opacity: 0.35;
+}
+.form input.invalid {
+  border: 1px solid #ED3A5A;
+}
+
+.span-invalid {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #ED3A5A;
+}
