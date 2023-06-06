@@ -22,9 +22,6 @@ body {
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  min-height: 100vh;
 }
 
 a {
@@ -77,6 +74,7 @@ main {
 
 .form-content {
   max-width: 38.4rem;
+  min-width: 32rem;
 }
 
 .form {
@@ -145,4 +143,44 @@ main {
   font-size: 1.4rem;
   line-height: 2.1rem;
   color: #ED3A5A;
+}
+
+.right-background img {
+  width: 100%;
+}
+
+@media (max-width: 1240px) {
+  .right-background {
+    min-width: 414px;
+  }
+}
+
+@media (max-width: 1055px) {
+  main {
+    align-items: end;
+  }
+}
+
+@media (max-width: 866px) {
+  .content {
+    padding: 4rem 0 0 4.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    justify-content: center;
+  }
+  .content {
+    padding: 4rem 4.2rem 0 4.2rem;
+  }
+  .right-background {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .content {
+    padding: 4rem 2rem 0 2rem;
+  }
 }
