@@ -130,5 +130,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/pagina-de-login/"><img width="300px" src="./pagina-de-login/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>12</td>
+          <td>
+            <a href="pagina-de-login">Kanban</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/kanban/"><img width="300px" src="./kanban/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
