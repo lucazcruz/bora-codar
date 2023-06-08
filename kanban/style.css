@@ -162,6 +162,7 @@ main .filter {
   background: #FFFFFF;
   box-shadow: 0 .4rem 1.6rem #EAE2FD;
   border-radius: .8rem;
+  cursor: grab;
 }
 
 .card h3 {
@@ -191,4 +192,9 @@ main .filter {
   font-size: 1.1rem;
   line-height: 130%;
   color: #7C3AED;
+}
+
+
+.dragging {
+  opacity: .5;
 }
