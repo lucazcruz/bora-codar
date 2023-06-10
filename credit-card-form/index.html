@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Card Form</title>
+</head>
+<body>
+  <div id="app">
+    <form>
+      <div class="credit-card">
+        <!-- <img src="./assets/bg-card.png" alt=""> -->
+      </div>
+
+      <div class="inputs">
+        <div>
+          <label for="card-number">Número do cartão</label>
+          <input type="text" name="card-number" id="card-number" placeholder="**** **** **** ****">
+        </div>
+        <div>
+          <label for="tutelary">Nome do titular</label>
+          <input type="text" name="tutelary" id="tutelary" placeholder="Nome como está no cartão">
+        </div>
+        <div class="row">
+          <div>
+            <label for="validity">Validade</label>
+            <input type="text" name="validity" id="validity" placeholder="mm/aa">
+          </div>
+          <div>
+            <label for="cvv">CVV</label>
+            <input type="password" name="cvv" id="cvv" placeholder="***">
+          </div>
+        </div>
+      </div>
+
+      <div class="safe-info">
+        <img src="./assets/ShieldCheck.svg" alt="shild check">
+        <span>Seus dados estão seguros</span>
+      </div>
+
+      <button class="submit-button">Adicionar cartão</button>
+    </form>
+  </div>
+</body>
+</html>
