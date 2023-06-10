@@ -118,3 +118,11 @@
   align-items: center;
   gap: 4px;
 }
+
+.credit-card.back .card-back {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.credit-card.back .card-front {
+  transform: perspective(1000px) rotateY(-180deg);
+}
