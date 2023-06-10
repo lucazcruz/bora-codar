@@ -13,15 +13,65 @@
 </head>
 <body>
   <div id="app">
-    <form>
+    <form id="card-form">
       <div class="credit-card">
-        <!-- <img src="./assets/bg-card.png" alt=""> -->
+
+        <div class="card-front">
+          <div class="top-info">
+            <img src="./assets/visa.svg" alt="card visa">
+            <img src="./assets/contactless-payment.svg" alt="contactless-payment">
+          </div>
+          <div class="card-number">
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="bottom-info">
+            <span>Seu nome aqui</span>
+            <span id="validity-card">**/**</span>
+          </div>
+        </div>
+
+        <div class="card-back">
+          <div class="strike"></div>
+
+          <div class="cvv-info">
+            <div class="cvv">
+              <span>•</span>
+              <span>•</span>
+              <span>•</span>
+            </div>
+            <p>CVV</p>
+          </div>
+        </div>
+
       </div>
 
       <div class="inputs">
         <div>
-          <label for="card-number">Número do cartão</label>
-          <input type="text" name="card-number" id="card-number" placeholder="**** **** **** ****">
+          <label for="inputNumber">Número do cartão</label>
+          <input type="text" name="inputNumber" id="inputNumber" placeholder="**** **** **** ****">
         </div>
         <div>
           <label for="tutelary">Nome do titular</label>
@@ -47,5 +97,7 @@
       <button class="submit-button">Adicionar cartão</button>
     </form>
   </div>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>

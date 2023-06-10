@@ -1,0 +1,120 @@
+.credit-card {
+  position: relative;
+  width: 28rem;
+  height: 16.8rem;
+  box-shadow: .0rem .4rem 2.4rem rgba(0, 0, 0, 0.25);
+}
+
+
+/* CARD FRONT */
+
+.card-front {
+  padding: 1.6rem 2.4rem 2.4rem;
+  border: .1rem solid var(--gray-700);
+  border-radius: 1.6rem;
+  box-shadow: .0rem .4rem 2.4rem rgba(0, 0, 0, 0.25);
+  
+  background: url('../assets/bg-card.png') center center;
+  background-size: cover;
+  transition: transform .4s ease;
+
+  width: 100%;
+  height: 100%;
+}
+
+.card-front .top-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.card-front .card-number {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--gray-50);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 2.4rem;
+}
+
+.card-front .card-number div {
+  display: flex;
+  gap: 4px;
+}
+
+.card-front .card-number span {
+  display: flex;
+  align-items: center;
+  width: .8rem;
+  height: 1.6rem;
+}
+
+.card-front .bottom-info {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--gray-50);
+  opacity: 0.5;
+}
+
+
+
+/* CARD BACK */
+
+.credit-card .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../assets/background-blur.png') center center;
+  background-size: cover;
+
+  border: .1rem solid var(--gray-700);
+  border-radius: 1.6rem;
+
+  transform: perspective(1000px) rotateY(-180deg);
+  backface-visibility: hidden;
+  transition: transform .4s ease;
+}
+
+.card-back .strike {
+  background: var(--gray-900);
+  height: 32px;
+  margin-top: 16px;
+}
+
+
+.card-back .cvv-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 46px;
+}
+
+.card-back .cvv-info p {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: var(--gray-200);
+}
+
+.card-back .cvv-info .cvv {
+  color: var(--gray-900);
+  background: var(--gray-300);
+  border-radius: 4px;
+  width: 200px;
+  height: 32px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 4px;
+}
