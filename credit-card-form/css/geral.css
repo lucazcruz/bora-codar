@@ -54,10 +54,15 @@ form input {
   color: var(--gray-100);
 
   width: 100%;
+  outline: 0;
 }
 
 form input::placeholder {
   color: var(--gray-400);
+}
+
+form input:focus {
+  border: 1.5px solid var(--brand-color);
 }
 
 .inputs div {
@@ -102,6 +107,19 @@ form input::placeholder {
   color: var(--gray-50);
 
   justify-self: stretch;
+}
+
+.submit-button:not(:disabled):hover {
+  background: var(--brand-color-light);
+}
+
+.submit-button:disabled {
+  opacity: .5;
+  cursor: initial;
+}
+
+.submit-button:focus {
+  outline: 2px solid #F9FAFB;
 }
 
 
