@@ -23,7 +23,7 @@ export default class ToggleCard {
     this.form.cvv.addEventListener("focusout", this.cardToggleShow);
 
     this.form.inputNumber.addEventListener("focus", this.showFront);
-    this.form.inputNumber.addEventListener("focus", this.showFront);
+    this.form.tutelary.addEventListener("focus", this.showFront);
     this.form.validity.addEventListener("focus", this.showFront);
   }
 }
