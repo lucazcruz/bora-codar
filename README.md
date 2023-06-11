@@ -133,10 +133,19 @@
         <tr>
           <td>12</td>
           <td>
-            <a href="pagina-de-login">Kanban</a>
+            <a href="kanban">Kanban</a>
           </td>
           <td align="center">
            <a href="https://lucazcruz.github.io/bora-codar/kanban/"><img width="300px" src="./kanban/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>
+            <a href="credit-card-form">Credit Card Form</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/credit-card-form/"><img width="300px" src="./credit-card-form/screenshot.png" /></a>
           </td>
         </tr>
     </tbody>
