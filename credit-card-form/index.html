@@ -48,8 +48,8 @@
             </div>
           </div>
           <div class="bottom-info">
-            <span>Seu nome aqui</span>
-            <span id="validity-card">**/**</span>
+            <span id="card-name">Seu nome aqui</span>
+            <span id="card-validity">**/**</span>
           </div>
         </div>
 
@@ -57,7 +57,7 @@
           <div class="strike"></div>
 
           <div class="cvv-info">
-            <div class="cvv">
+            <div id="card-cvv">
               <span>•</span>
               <span>•</span>
               <span>•</span>
@@ -71,20 +71,20 @@
       <div class="inputs">
         <div>
           <label for="inputNumber">Número do cartão</label>
-          <input type="text" name="inputNumber" id="inputNumber" placeholder="**** **** **** ****">
+          <input type="text" name="inputNumber" id="inputNumber" placeholder="**** **** **** ****" inputmode="numeric" maxlength="19" required>
         </div>
         <div>
           <label for="tutelary">Nome do titular</label>
-          <input type="text" name="tutelary" id="tutelary" placeholder="Nome como está no cartão">
+          <input type="text" name="tutelary" id="tutelary" placeholder="Nome como está no cartão" required>
         </div>
         <div class="row">
           <div>
             <label for="validity">Validade</label>
-            <input type="text" name="validity" id="validity" placeholder="mm/aa">
+            <input type="text" name="validity" id="validity" placeholder="mm/aa" inputmode="numeric" maxlength="5" required>
           </div>
           <div>
             <label for="cvv">CVV</label>
-            <input type="password" name="cvv" id="cvv" placeholder="***">
+            <input type="password" name="cvv" id="cvv" placeholder="***" inputmode="numeric" maxlength="3" required>
           </div>
         </div>
       </div>
