@@ -71,20 +71,24 @@
       <div class="inputs">
         <div>
           <label for="inputNumber">Número do cartão</label>
-          <input type="text" name="inputNumber" id="inputNumber" placeholder="**** **** **** ****" inputmode="numeric" maxlength="19" required>
+          <input type="text" name="inputNumber" id="inputNumber" placeholder="**** **** **** ****" inputmode="numeric" maxlength="19" required >
+          <span class="error"></span>
         </div>
         <div>
           <label for="tutelary">Nome do titular</label>
           <input type="text" name="tutelary" id="tutelary" placeholder="Nome como está no cartão" required>
+          <span class="error"></span>
         </div>
         <div class="row">
           <div>
             <label for="validity">Validade</label>
             <input type="text" name="validity" id="validity" placeholder="mm/aa" inputmode="numeric" maxlength="5" required>
+            <span class="error"></span>
           </div>
           <div>
             <label for="cvv">CVV</label>
             <input type="password" name="cvv" id="cvv" placeholder="***" inputmode="numeric" maxlength="3" required>
+            <span class="error"></span>
           </div>
         </div>
       </div>

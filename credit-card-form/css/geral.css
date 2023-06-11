@@ -9,6 +9,15 @@ html {
   font-size: 62.5%;
 }
 
+.error {
+  font-size: 14px;
+  color: var(--status-error);
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 #app {
   display: flex;
   justify-content: center;
@@ -63,6 +72,10 @@ form input::placeholder {
 
 form input:focus {
   border: 1.5px solid var(--brand-color);
+}
+
+form input.invalid {
+  border: 1.5px solid var(--status-error);
 }
 
 .inputs div {
@@ -121,7 +134,6 @@ form input:focus {
 .submit-button:focus {
   outline: 2px solid #F9FAFB;
 }
-
 
 @media (min-width: 736px) {
   #app {
