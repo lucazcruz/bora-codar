@@ -74,6 +74,30 @@ export default class CreditCard {
       target.classList.add("invalid");
       target.nextElementSibling.innerHTML = `<img src="./assets/warning.svg" > ${message}`
     }
+
+    if (target === this.form.inputNumber) {
+      const allNumbers = target.value.replace(/\s/g, '').split('');
+
+      const newNumbers = allNumbers.map((number, index) => {
+        if (index === 15) return 0
+
+        if (index % 2 === 0) {
+          const x2 = number * 2;
+          const newNumber = x2 >= 10 ? x2 -9 : x2
+          return newNumber;
+        }
+        return number;
+      })
+
+      const soma = newNumbers.reduce((acc, value) => +value + acc, 0);
+      const verificador = 10 - soma % 10;
+      const valid = verificador == allNumbers[allNumbers.length-1];
+      
+      if(valid) return;
+
+      target.classList.add("invalid");
+      target.nextElementSibling.innerHTML = `<img src="./assets/warning.svg" > Insira um número de cartão válido`
+    }
   }
 
   handleCvv(target) {
