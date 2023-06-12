@@ -9,6 +9,10 @@ html {
   font-size: 62.5%;
 }
 
+img {
+  display: block;
+}
+
 .error {
   font-size: 14px;
   color: var(--status-error);
