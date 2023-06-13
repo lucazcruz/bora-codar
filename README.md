@@ -148,5 +148,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/credit-card-form/"><img width="300px" src="./credit-card-form/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>14</td>
+          <td>
+            <a href="componente-de-upload">Componente de Upload</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/componente-de-upload/"><img width="300px" src="./componente-de-upload/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
