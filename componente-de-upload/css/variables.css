@@ -1,0 +1,23 @@
+:root {
+  --bg-progress: linear-gradient(90deg, rgba(58, 97, 237, 0.52) 0%, #7C3AED 100%);
+  --bg-purple: #E9E3F8;
+
+  --progress-ready-color: #4E884D;
+  --progress-ready-bg: #73B172;
+  --image-ready-bg: #DAF2D9;
+  
+  --text-color-error: #E36363;
+  --image-error-bg: #F2D9D9;
+
+  --text-color: #7A5FEC;
+  --text-color-100: #E3E3ED;
+  --text-color-200: #9892A6;
+  --text-color-300: #857E95;
+  --text-color-400: #746E82;
+  --text-color-500: #575361;
+  
+
+  --bg-white: #FFFFFF;
+  --bg-white-2: #FBFAFF;
+  --bg-white-3: #F3F0FF;
+}
