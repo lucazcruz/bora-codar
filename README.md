@@ -157,5 +157,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/componente-de-upload/"><img width="300px" src="./componente-de-upload/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>15</td>
+          <td>
+            <a href="pricing-table">Pricing Table</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/pricing-table/"><img width="300px" src="./pricing-table/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
