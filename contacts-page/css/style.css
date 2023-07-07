@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.perfil-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: #282843;
+}
+
+header {
+  background-color: #16151E;
+  border-radius: 0 0 8px 8px;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .content h1 {
+  color: #E1E1E6;
+  font-size: clamp(20px, 5vw, 40px);
+  font-weight: 700;
+}
+
+header .actions {
+  display: flex;
+  gap: 16px;
+}
+
+header .form label {
+  background: #24243D;
+  border-radius: 8px;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .form label:has(:focus) {
+  outline: 1.5px solid white;
+}
+
+#search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+
+  color: #E1E1E6;
+  font-size: 12px;
+  outline: none;
+}
+
+#search-input::placeholder {
+  color: #818181;
+}
+
+.contact-list {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.contact-list > div {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 32px 0;
+}
+
+.contact-list .letter {
+  background: #633BBC;
+  border-radius: 8px;
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #E1E1E6;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contact {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact h3 {
+  color: #E1E1E6;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.contact p {
+  color: #8C8CBA;
+  font-size: 12px;
+}

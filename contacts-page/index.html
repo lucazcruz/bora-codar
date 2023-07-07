@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Página de Contatos</title>
+</head>
+<body>
+  <header>
+    <div class="content">
+      <h1>Meus contatos</h1>
+      <div class="actions">
+        <button>
+          <img src="./assets/add.svg" alt="add icon">
+        </button>
+        <button>
+          <img src="./assets/pencil.svg" alt="pencil icon">
+        </button>
+        <button>
+          <img src="./assets/trash.svg" alt="trash icon">
+        </button>
+      </div>
+    </div>
+    <form class="form">
+      <label for="search-input">
+        <img src="./assets/search.svg" alt="search icon">
+        <input type="search" name="search" id="search-input" placeholder="Busque por nome ou por dados de contato...">
+      </label>
+    </form>
+  </header>
+  <main></main>
+
+  <template id="container-template">
+    <div>
+      <span class="letter"></span>
+    </div>
+  </template>
+
+  <template id="contact-template">
+    <li class="contact">
+      <img class="perfil-image" src="https://source.unsplash.com/random?a=1" alt="photo">
+      <div>
+        <h3></h3>
+        <p></p>
+      </div>
+    </li>
+  </template>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
