@@ -16,13 +16,13 @@
     <div class="content">
       <h1>Meus contatos</h1>
       <div class="actions">
-        <button>
+        <button class="plus-button">
           <img src="./assets/add.svg" alt="add icon">
         </button>
-        <button>
+        <button class="edit-button">
           <img src="./assets/pencil.svg" alt="pencil icon">
         </button>
-        <button>
+        <button class="delete-button">
           <img src="./assets/trash.svg" alt="trash icon">
         </button>
       </div>
@@ -35,6 +35,20 @@
     </form>
   </header>
   <main></main>
+
+  <div class="modal hidden">
+    <form>
+      <div>
+        <label for="name-input">Nome:</label>
+        <input type="text" name="name" id="name-input">
+      </div>
+      <div>
+        <label for="number-input">Número:</label>
+        <input type="text" name="number" id="number-input">
+      </div>
+      <button type="submit" class="save-button">Salvar</button>
+    </form>
+  </div>
 
   <template id="container-template">
     <div>

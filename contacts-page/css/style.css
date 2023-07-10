@@ -126,3 +126,57 @@ header .form label:has(:focus) {
   color: #8C8CBA;
   font-size: 12px;
 }
+
+.modal.hidden {
+  display: none;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgb(0 0 0 / .6);
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.modal form {
+  background: #282843;
+  padding: 40px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal form label {
+  display: block;
+  margin-bottom: 4px;
+  color: #8C8CBA;
+  font-size: 14px;
+}
+
+.modal form input {
+  background: #E1E1E6;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  padding: 4px 6px;
+}
+
+.modal .save-button {
+  background: #633BBC;
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.modal .save-button:hover {
+  background: #5834a5;
+}

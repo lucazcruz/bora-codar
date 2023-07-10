@@ -1,3 +1,8 @@
+const modal = document.querySelector(".modal");
+const plusButton = document.querySelector(".plus-button");
+const form = document.querySelector(".modal form");
+
+
 const main = document.querySelector("main");
 const searchInput = document.querySelector("#search-input");
 
@@ -34,7 +39,7 @@ const renderData = (data) => {
     }
     contactsByLetter[letter].push(contact);
   })
-  
+
   for (const letter in contactsByLetter) {
     const contacts = contactsByLetter[letter];
     const container = renderContainer(letter, contacts);
@@ -55,28 +60,16 @@ const sortData = (a, b) => {
 }
 
 const getData = () => {
-  let data = [
-    {
-      "name": "João",
-      "number": "123456789"
-    },
-    {
-      "name": "Maria",
-      "number": "987654321"
-    },
-    {
-      "name": "Joana",
-      "number": "749944444"
-    },
-    {
-      "name": "Ana",
-      "number": "321654987"
-    }
-  ]
-  
-  data.sort(sortData);
-
+  const data = JSON.parse(localStorage.getItem("contactsList")) || [];
   return data;
+}
+
+const saveContacts = (formData) => {
+  const data = getData();
+  const newData = [...data, formData];
+  newData.sort(sortData);
+
+  localStorage.setItem("contactsList", JSON.stringify(newData));
 }
 
 const showData = () => {
@@ -97,5 +90,33 @@ const filterData = ({ target }) => {
   renderData(filteredData);
 }
 
+const onModal = () => {
+  modal.classList.remove("hidden");
+}
+
+const hiddenModal = (e , hidden = false) => {
+  if (hidden) {
+    modal.classList.add("hidden");
+    return
+  }
+
+  if (e.target === modal) modal.classList.add("hidden");
+}
+
+const newContact = (e) => {
+  e.preventDefault();
+  const formPrototype = new FormData(form);
+  const formData = Object.fromEntries(formPrototype);
+  
+  if (e.target === form[2]) {
+    saveContacts(formData);
+    showData();
+    hiddenModal('', true);
+  }
+}
+
+form.addEventListener("click", newContact)
+modal.addEventListener("click", hiddenModal);
+plusButton.addEventListener("click", onModal);
 searchInput.addEventListener("input", filterData);
 showData()
