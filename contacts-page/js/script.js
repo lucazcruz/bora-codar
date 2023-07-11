@@ -1,7 +1,7 @@
 const modal = document.querySelector(".modal");
 const plusButton = document.querySelector(".plus-button");
+const deleteButton = document.querySelector(".delete-button");
 const form = document.querySelector(".modal form");
-
 
 const main = document.querySelector("main");
 const searchInput = document.querySelector("#search-input");
@@ -59,22 +59,39 @@ const sortData = (a, b) => {
   return 0;
 }
 
-const getData = () => {
-  const data = JSON.parse(localStorage.getItem("contactsList")) || [];
-  return data;
-}
-
 const saveContacts = (formData) => {
   const data = getData();
   const newData = [...data, formData];
   newData.sort(sortData);
 
+  saveData(newData)
+}
+
+const getData = () => {
+  const data = JSON.parse(localStorage.getItem("contactsList")) || [];
+  return data;
+}
+
+const saveData = (newData) => {
   localStorage.setItem("contactsList", JSON.stringify(newData));
+}
+
+const selectContacts = ({ currentTarget }) => {
+  if (currentTarget.classList.contains("selected")) {
+    currentTarget.classList.remove("selected");
+    return
+  }
+  currentTarget.classList.add("selected");
 }
 
 const showData = () => {
   const data = getData();
   renderData(data)
+
+  const contactsArray = document.querySelectorAll(".contact");
+  contactsArray.forEach((contact) => {
+    contact.addEventListener("click", selectContacts);
+  })
 }
 
 const filterData = ({ target }) => {
@@ -115,8 +132,25 @@ const newContact = (e) => {
   }
 }
 
+const deleteContacts = () => {
+  const data = getData();
+  const contactsArray = document.querySelectorAll(".contact");
+
+  const newData = data.filter((item, index) => {
+    if (contactsArray[index].classList.contains("selected")) {
+      return false
+    }
+    return true
+  })
+
+  saveData(newData);
+  showData();
+}
+
 form.addEventListener("click", newContact)
 modal.addEventListener("click", hiddenModal);
 plusButton.addEventListener("click", onModal);
 searchInput.addEventListener("input", filterData);
-showData()
+deleteButton.addEventListener("click", deleteContacts);
+
+showData();

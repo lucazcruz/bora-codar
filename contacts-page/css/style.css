@@ -115,6 +115,10 @@ header .form label:has(:focus) {
   gap: 16px;
 }
 
+.contact.selected {
+  background: #633BBC;
+}
+
 .contact h3 {
   color: #E1E1E6;
   font-size: 16px;
