@@ -1,6 +1,7 @@
 const modal = document.querySelector(".modal");
 const plusButton = document.querySelector(".plus-button");
 const deleteButton = document.querySelector(".delete-button");
+const editButton = document.querySelector(".edit-button");
 const form = document.querySelector(".modal form");
 
 const main = document.querySelector("main");
@@ -59,11 +60,15 @@ const sortData = (a, b) => {
   return 0;
 }
 
-const saveContacts = (formData) => {
+const saveContacts = (formData, index) => {
   const data = getData();
+  
+  if (index !== undefined) {
+    data[index] = formData;
+    saveData(data);
+    return
+  }
   const newData = [...data, formData];
-  newData.sort(sortData);
-
   saveData(newData)
 }
 
@@ -73,6 +78,7 @@ const getData = () => {
 }
 
 const saveData = (newData) => {
+  newData.sort(sortData);
   localStorage.setItem("contactsList", JSON.stringify(newData));
 }
 
@@ -107,8 +113,15 @@ const filterData = ({ target }) => {
   renderData(filteredData);
 }
 
-const onModal = () => {
+const onModal = (e, index) => {
   modal.classList.remove("hidden");
+
+  if(index !== undefined) {
+    form[2].onclick = (e) => newContact(e, index);
+    return
+  }
+
+  form[2].onclick = (e) => newContact(e);
 }
 
 const hiddenModal = (e , hidden = false) => {
@@ -120,16 +133,15 @@ const hiddenModal = (e , hidden = false) => {
   if (e.target === modal) modal.classList.add("hidden");
 }
 
-const newContact = (e) => {
+const newContact = (e, index) => {
   e.preventDefault();
+
   const formPrototype = new FormData(form);
   const formData = Object.fromEntries(formPrototype);
-  
-  if (e.target === form[2]) {
-    saveContacts(formData);
-    showData();
-    hiddenModal('', true);
-  }
+
+  saveContacts(formData, index);
+  hiddenModal('', true)
+  showData();
 }
 
 const deleteContacts = () => {
@@ -147,10 +159,30 @@ const deleteContacts = () => {
   showData();
 }
 
-form.addEventListener("click", newContact)
+const editContacts = () => {
+  const contactSelected = document.querySelectorAll(".contact.selected");
+  if (contactSelected.length === 0) return;
+  if (contactSelected.length > 1) {
+    alert("Selecione apenas um contato.")
+    return
+  }
+
+  const contactsArray = document.querySelectorAll(".contact");
+  const data = getData();
+
+  const index = Array.from(contactsArray).indexOf(contactSelected[0]);
+  const contact = data[index];
+
+  form[0].value = contact.name;
+  form[1].value = contact.number;
+  
+  onModal('', index);
+}
+
 modal.addEventListener("click", hiddenModal);
 plusButton.addEventListener("click", onModal);
 searchInput.addEventListener("input", filterData);
 deleteButton.addEventListener("click", deleteContacts);
+editButton.addEventListener("click", editContacts);
 
 showData();
