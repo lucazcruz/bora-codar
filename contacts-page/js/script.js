@@ -1,188 +1,206 @@
-const modal = document.querySelector(".modal");
-const plusButton = document.querySelector(".plus-button");
-const deleteButton = document.querySelector(".delete-button");
-const editButton = document.querySelector(".edit-button");
-const form = document.querySelector(".modal form");
+class MyContacts {
+  constructor() {
+    this.modal = document.querySelector(".modal");
+    this.plusButton = document.querySelector(".plus-button");
+    this.deleteButton = document.querySelector(".delete-button");
+    this.editButton = document.querySelector(".edit-button");
+    this.form = document.querySelector(".modal form");
+    
+    this.main = document.querySelector("main");
+    this.searchInput = document.querySelector("#search-input");
+    
+    this.containerTemplate = document.querySelector("#container-template");
+    this.contactTemplate = document.querySelector("#contact-template");
+  }
 
-const main = document.querySelector("main");
-const searchInput = document.querySelector("#search-input");
+  renderContact = ({ name, number }) => {
+    const contactElement = this.contactTemplate.content.cloneNode(true);
+    contactElement.querySelector("h3").innerText = name;
+    contactElement.querySelector("p").innerText = number;
+    return contactElement;
+  }
 
-const containerTemplate = document.querySelector("#container-template");
-const contactTemplate = document.querySelector("#contact-template");
+  renderContainer = (letter, contacts) => {
+    const containerElement = this.containerTemplate.content.cloneNode(true);
+    containerElement.querySelector(".letter").innerText = letter;
+    contacts.forEach(contact => {
+      const li = this.renderContact(contact)
+      containerElement.children[0].appendChild(li);
+    })
 
-const renderContact = ({ name, number }) => {
-  const contactElement = contactTemplate.content.cloneNode(true);
-  contactElement.querySelector("h3").innerText = name;
-  contactElement.querySelector("p").innerText = number;
-  return contactElement;
-}
+    return containerElement;
+  }
 
-const renderContainer = (letter, contacts) => {
-  const containerElement = containerTemplate.content.cloneNode(true);
-  containerElement.querySelector(".letter").innerText = letter;
-  contacts.forEach(contact => {
-    const li = renderContact(contact)
-    containerElement.children[0].appendChild(li);
-  })
+  renderData = (data) => {
+    const ul = document.createElement("ul");
+    ul.classList.add('contact-list');
+    
+    let contactsByLetter = {};
+    data.forEach(contact => {
+      const letter = contact.name[0].toUpperCase();
+      if (!contactsByLetter[letter]) {
+        contactsByLetter[letter] = [];
+      }
+      contactsByLetter[letter].push(contact);
+    })
 
-  return containerElement;
-}
-
-const renderData = (data) => {
-  const ul = document.createElement("ul");
-  ul.classList.add('contact-list');
-  
-  let contactsByLetter = {};
-  data.forEach(contact => {
-    const letter = contact.name[0].toUpperCase();
-    if (!contactsByLetter[letter]) {
-      contactsByLetter[letter] = [];
+    for (const letter in contactsByLetter) {
+      const contacts = contactsByLetter[letter];
+      const container = this.renderContainer(letter, contacts);
+      ul.appendChild(container);
     }
-    contactsByLetter[letter].push(contact);
-  })
-
-  for (const letter in contactsByLetter) {
-    const contacts = contactsByLetter[letter];
-    const container = renderContainer(letter, contacts);
-    ul.appendChild(container);
-  }
-  
-  main.innerHTML = '';
-  main.appendChild(ul);
-}
-
-const sortData = (a, b) => {
-  let nameA = a.name.toUpperCase();
-  let nameB = b.name.toUpperCase();
-
-  if (nameA < nameB) return -1;
-  if (nameA > nameB) return 1;
-  return 0;
-}
-
-const saveContacts = (formData, index) => {
-  const data = getData();
-  
-  if (index !== undefined) {
-    data[index] = formData;
-    saveData(data);
-    return
-  }
-  const newData = [...data, formData];
-  saveData(newData)
-}
-
-const getData = () => {
-  const data = JSON.parse(localStorage.getItem("contactsList")) || [];
-  return data;
-}
-
-const saveData = (newData) => {
-  newData.sort(sortData);
-  localStorage.setItem("contactsList", JSON.stringify(newData));
-}
-
-const selectContacts = ({ currentTarget }) => {
-  if (currentTarget.classList.contains("selected")) {
-    currentTarget.classList.remove("selected");
-    return
-  }
-  currentTarget.classList.add("selected");
-}
-
-const showData = () => {
-  const data = getData();
-  renderData(data)
-
-  const contactsArray = document.querySelectorAll(".contact");
-  contactsArray.forEach((contact) => {
-    contact.addEventListener("click", selectContacts);
-  })
-}
-
-const filterData = ({ target }) => {
-  const data = getData();
-
-  const search = target.value.toLowerCase();
-  const filteredData = data.filter(contact => {
-    const condition1 = contact.name.toLowerCase().includes(search);
-    const condition2 = contact.number.includes(search);
-    return condition1 || condition2;
-  })
-
-  renderData(filteredData);
-}
-
-const onModal = (e, index) => {
-  modal.classList.remove("hidden");
-
-  if(index !== undefined) {
-    form[2].onclick = (e) => newContact(e, index);
-    return
+    
+    this.main.innerHTML = '';
+    this.main.appendChild(ul);
   }
 
-  form[2].onclick = (e) => newContact(e);
-}
+  sortData = (a, b) => {
+    let nameA = a.name.toUpperCase();
+    let nameB = b.name.toUpperCase();
 
-const hiddenModal = (e , hidden = false) => {
-  if (hidden) {
-    modal.classList.add("hidden");
-    return
+    if (nameA < nameB) return -1;
+    if (nameA > nameB) return 1;
+    return 0;
   }
 
-  if (e.target === modal) modal.classList.add("hidden");
-}
-
-const newContact = (e, index) => {
-  e.preventDefault();
-
-  const formPrototype = new FormData(form);
-  const formData = Object.fromEntries(formPrototype);
-
-  saveContacts(formData, index);
-  hiddenModal('', true)
-  showData();
-}
-
-const deleteContacts = () => {
-  const data = getData();
-  const contactsArray = document.querySelectorAll(".contact");
-
-  const newData = data.filter((item, index) => {
-    if (contactsArray[index].classList.contains("selected")) {
-      return false
+  saveContacts = (formData, index) => {
+    const data = this.getData();
+    this.form[0].value = '';
+    this.form[1].value = '';
+    
+    if (index !== undefined) {
+      data[index] = formData;
+      this.saveData(data);
+      return
     }
-    return true
-  })
-
-  saveData(newData);
-  showData();
-}
-
-const editContacts = () => {
-  const contactSelected = document.querySelectorAll(".contact.selected");
-  if (contactSelected.length === 0) return;
-  if (contactSelected.length > 1) {
-    alert("Selecione apenas um contato.")
-    return
+    const newData = [...data, formData];
+    this.saveData(newData)
   }
 
-  const contactsArray = document.querySelectorAll(".contact");
-  const data = getData();
+  getData = () => {
+    const data = JSON.parse(localStorage.getItem("contactsList")) || [];
+    return data;
+  }
 
-  const index = Array.from(contactsArray).indexOf(contactSelected[0]);
-  const contact = data[index];
+  saveData = (newData) => {
+    newData.sort(this.sortData);
+    localStorage.setItem("contactsList", JSON.stringify(newData));
+  }
 
-  form[0].value = contact.name;
-  form[1].value = contact.number;
-  
-  onModal('', index);
+  selectContacts = ({ currentTarget }) => {
+    if (currentTarget.classList.contains("selected")) {
+      currentTarget.classList.remove("selected");
+      return
+    }
+    currentTarget.classList.add("selected");
+  }
+
+  selectEvent = () => {
+    const contactsArray = document.querySelectorAll(".contact");
+    contactsArray.forEach((contact) => {
+      contact.addEventListener("click", this.selectContacts);
+    })
+  }
+
+  showData = () => {
+    const data = this.getData();
+    this.renderData(data)
+    this.selectEvent();
+  }
+
+  filterData = ({ target }) => {
+    const data = this.getData();
+
+    const search = target.value.toLowerCase();
+    const filteredData = data.filter(contact => {
+      const condition1 = contact.name.toLowerCase().includes(search);
+      const condition2 = contact.number.includes(search);
+      return condition1 || condition2;
+    })
+
+    this.renderData(filteredData);
+  }
+
+  onModal = (e, index) => {
+    this.modal.classList.remove("hidden");
+
+    if(index !== undefined) {
+      this.form[2].onclick = (e) => this.newContact(e, index);
+      return
+    }
+
+    this.form[2].onclick = (e) => this.newContact(e);
+  }
+
+  hiddenModal = (e , hidden = false) => {
+    if (hidden) {
+      this.modal.classList.add("hidden");
+      return
+    }
+
+    if (e.target === this.modal) this.modal.classList.add("hidden");
+  }
+
+  newContact = (e, index) => {
+    e.preventDefault();
+
+    const formPrototype = new FormData(this.form);
+    const formData = Object.fromEntries(formPrototype);
+
+    if (formData.name === '' || formData.number === ''){
+      alert("Campos Inválidos.")
+      return
+    }
+
+    this.saveContacts(formData, index);
+    this.hiddenModal('', true)
+    this.showData();
+  }
+
+  deleteContacts = () => {
+    const data = this.getData();
+    const contactsArray = document.querySelectorAll(".contact");
+
+    const newData = data.filter((item, index) => {
+      if (contactsArray[index].classList.contains("selected")) {
+        return false
+      }
+      return true
+    })
+
+    this.saveData(newData);
+    this.showData();
+  }
+
+  editContacts = () => {
+    const contactSelected = document.querySelectorAll(".contact.selected");
+    if (contactSelected.length === 0) return;
+    if (contactSelected.length > 1) {
+      alert("Selecione apenas um contato.")
+      return
+    }
+
+    const contactsArray = document.querySelectorAll(".contact");
+    const data = this.getData();
+
+    const index = Array.from(contactsArray).indexOf(contactSelected[0]);
+    const contact = data[index];
+
+    this.form[0].value = contact.name;
+    this.form[1].value = contact.number;
+    
+    this.onModal('', index);
+  }
+
+  init() {
+    this.modal.addEventListener("click", this.hiddenModal);
+    this.plusButton.addEventListener("click", this.onModal);
+    this.searchInput.addEventListener("input", this.filterData);
+    this.deleteButton.addEventListener("click", this.deleteContacts);
+    this.editButton.addEventListener("click", this.editContacts);
+    this.showData();
+  }
 }
 
-modal.addEventListener("click", hiddenModal);
-plusButton.addEventListener("click", onModal);
-searchInput.addEventListener("input", filterData);
-deleteButton.addEventListener("click", deleteContacts);
-editButton.addEventListener("click", editContacts);
-
-showData();
+const myContacts = new MyContacts();
+myContacts.init();
