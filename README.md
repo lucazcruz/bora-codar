@@ -166,5 +166,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/pricing-table/"><img width="300px" src="./pricing-table/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>16</td>
+          <td>
+            <a href="contacts-page">Contacts Page</a>
+          </td>
+          <td align="center">
+           <a href="https://lucazcruz.github.io/bora-codar/contacts-page/"><img width="300px" src="./contacts-page/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>

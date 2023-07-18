@@ -84,13 +84,13 @@ header .form label:has(:focus) {
   padding: 48px 40px;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 48px;
 }
 
 .contact-list > div {
   display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: 32px 0;
+  grid-template-columns: 84px 1fr;
+  gap: 24px 0;
 }
 
 .contact-list .letter {
@@ -113,6 +113,9 @@ header .form label:has(:focus) {
   display: flex;
   align-items: center;
   gap: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .contact.selected {

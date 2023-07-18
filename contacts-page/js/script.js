@@ -15,6 +15,11 @@ class MyContacts {
 
   renderContact = ({ name, number }) => {
     const contactElement = this.contactTemplate.content.cloneNode(true);
+    // const random = Math.floor(Math.random() * 100);
+    const random = 1;
+    const imgUrl = `https://source.unsplash.com/random?a=${random}`
+
+    contactElement.querySelector(".perfil-image").src = imgUrl;
     contactElement.querySelector("h3").innerText = name;
     contactElement.querySelector("p").innerText = number;
     return contactElement;
