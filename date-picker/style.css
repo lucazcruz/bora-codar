@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+/* font-family: 'Roboto', sans-serif; */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+img {
+  display: block;
+}
+
+span {
+  display: flex;
+  align-items: center;
+}
+
+.date-picker,
+.month-picker {
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--color-card-primary, #FFF);
+  box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.16);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.month-picker {display: none;}
+
+.month-selector,
+.year-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--font-colors-color-font-heading, #333);
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.calendar {
+  border-collapse: collapse;
+}
+
+.calendar thead {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.calendar tbody,
+.calendar tr {
+  display: block;
+}
+
+.calendar tbody tr + tr{
+  margin-top: 8px;
+}
+
+.calendar thead th{
+  width: 40px;
+  height: 32px;
+  color: var(--font-colors-color-font-text, #666);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.96px;
+}
+
+.calendar tbody td {
+  width: 40px;
+  height: 40px;
+  color: var(--font-colors-color-font-text, #666);
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.calendar tbody td:hover {
+  border-radius: 8px;
+  background: var(--color-item-on-hover, #ECE0FD);
+}
+
+.month-picker {
+  width: 344px;
+}
+
+.month-picker .months {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 17px;
+}
+
+.month-picker .month {
+  height: 40px;
+  width: 82px;
+  cursor: pointer;
+  color: var(--font-colors-color-font-text, #666);
+  
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.month-picker .month:hover {
+  border-radius: 8px;
+  background: var(--color-item-on-hover, #ECE0FD);
+}
