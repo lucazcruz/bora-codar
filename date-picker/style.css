@@ -91,13 +91,15 @@ span {
 .calendar .month-days div {
   width: 40px;
   height: 40px;
-  color: var(--font-colors-color-font-text, #666);
+  color: #666;
   font-family: Lato;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
   cursor: pointer;
+
+  position: relative;
 
   display: flex;
   align-items: center;
@@ -112,6 +114,25 @@ span {
 .calendar .month-days .prev-day,
 .calendar .month-days .next-day {
   color: #66666680;
+}
+
+.calendar div.today,
+.calendar div.today:hover {
+  background: #6200EE;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.calendar div.today::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  bottom: 6px;
 }
 
 .month-picker {
