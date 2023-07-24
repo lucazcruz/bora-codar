@@ -59,25 +59,12 @@ span {
   line-height: 24px;
 }
 
-.calendar {
-  border-collapse: collapse;
-}
-
-.calendar thead {
-  display: block;
+.calendar .week {
+  display: flex;
   margin-bottom: 4px;
 }
 
-.calendar tbody,
-.calendar tr {
-  display: block;
-}
-
-.calendar tbody tr + tr{
-  margin-top: 8px;
-}
-
-.calendar thead th{
+.calendar .week div {
   width: 40px;
   height: 32px;
   color: var(--font-colors-color-font-text, #666);
@@ -88,24 +75,43 @@ span {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.96px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.calendar tbody td {
+.calendar .month-days{
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  gap: 8px 0px;
+
+}
+
+.calendar .month-days div {
   width: 40px;
   height: 40px;
   color: var(--font-colors-color-font-text, #666);
-  text-align: center;
   font-family: Lato;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.calendar tbody td:hover {
+.calendar .month-days div:hover {
   border-radius: 8px;
   background: var(--color-item-on-hover, #ECE0FD);
+}
+
+.calendar .month-days .prev-day,
+.calendar .month-days .next-day {
+  color: #66666680;
 }
 
 .month-picker {
