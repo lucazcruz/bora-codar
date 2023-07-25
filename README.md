@@ -175,5 +175,14 @@
            <a href="https://lucazcruz.github.io/bora-codar/contacts-page/"><img width="300px" src="./contacts-page/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>17</td>
+          <td>
+            <a href="data-picker">Data Picker</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/data-picker/"><img width="300px" src="./data-picker/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
