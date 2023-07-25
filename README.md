@@ -178,10 +178,10 @@
         <tr>
           <td>17</td>
           <td>
-            <a href="data-picker">Data Picker</a>
+            <a href="date-picker">Date Picker</a>
           </td>
           <td align="center">
-            <a href="https://lucazcruz.github.io/bora-codar/data-picker/"><img width="300px" src="./data-picker/screenshot.png" /></a>
+            <a href="https://lucazcruz.github.io/bora-codar/date-picker/"><img width="300px" src="./date-picker/screenshot.png" /></a>
           </td>
         </tr>
     </tbody>
