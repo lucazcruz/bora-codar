@@ -184,5 +184,14 @@
             <a href="https://lucazcruz.github.io/bora-codar/date-picker/"><img width="300px" src="./date-picker/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>18</td>
+          <td>
+            <a href="card-de-personagem">Card de Personagem</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/card-de-personagem/"><img width="300px" src="./card-de-personagem/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>

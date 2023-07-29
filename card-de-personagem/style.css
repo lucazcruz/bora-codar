@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+img {display: block;}
+
+#app {
+  background: linear-gradient(137deg, #030422 0%, #090114 100%);
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 220px;
+}
+
+.card {
+  background: #121214;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15), 0px 7px 16px 0px rgba(0, 0, 0, 0.15), 0px 28px 28px 0px rgba(0, 0, 0, 0.13), 0px 64px 38px 0px rgba(0, 0, 0, 0.08), 0px 113px 45px 0px rgba(0, 0, 0, 0.02), 0px 177px 50px 0px rgba(0, 0, 0, 0.00);
+  border-radius: 16px;
+  overflow: hidden;
+  
+  position: relative;
+}
+
+.overlayer {
+  background: linear-gradient(0deg, rgba(0, 1, 14, 0.50) 0%, rgba(0, 1, 14, 0.50) 100%), linear-gradient(130deg, rgba(14, 23, 101, 0.85) 0%, rgba(42, 17, 92, 0.5) 98.96%);
+
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2.56px;
+  color: #312D74;
+
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.main-card {
+  padding: 48px 133px 82px 40px;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.20), 0px 18px 40px 0px rgba(0, 0, 0, 0.20), 0px 73px 73px 0px rgba(0, 0, 0, 0.17), 0px 165px 99px 0px rgba(0, 0, 0, 0.10), 0px 294px 118px 0px rgba(0, 0, 0, 0.03), 0px 459px 129px 0px rgba(0, 0, 0, 0.00);
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: url('./assets/character.png') no-repeat right bottom,
+  url('./assets/Image.png');
+
+  position: absolute;
+  z-index: 2;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-card .title h2 {
+  color: #ECE4EF;
+  text-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.40);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 126%;
+  letter-spacing: 2.56px;
+  text-transform: uppercase;
+
+  margin-bottom: 16px; 
+}
+
+.main-card .title p {
+  max-width: 263px;
+  color: #D8CEDE;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 126%;
+
+  margin-bottom: 60px;
+}
+
+.main-card .info {
+  max-width: 198px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main-card .info h3 {
+  color: #9C83A7;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.main-card .info p {
+  color: #D8CEDE;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 18.2px */
+}
