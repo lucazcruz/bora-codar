@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+}
+
+#app {
+  background: #E5D8EA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.widget {
+  max-width: 795px;
+  width: 100%;
+  max-height: 689px;
+  height: 100%;
+
+  padding: 24px 56px;
+  border-radius: 40px;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  gap: 99px;
+}
+
+.widget .detail {
+  width: 168px;
+  height: 17px;
+  border-radius: 999px;
+  background: #E5D8EA;
+  margin: 0 auto;
+}
+
+.widget .title h1 {
+  color: #372D3B;
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.widget .title h1 span {
+  color: #864293;
+}
+
+.widget .title p {
+  color: #372D3B;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.widget .profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.widget .profile-info .name {
+  color: #372D3B;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.widget .profile-image {
+  height: 137px;
+  width: 137px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.widget .profile-info .stars {
+  padding: 7px 20px;
+  border-radius: 15.686px;
+  background: #372D3B;
+  display: flex;
+  gap: 9.8px;
+
+  color: #FBF8FC;
+  font-size: 19.608px;
+  font-weight: 600;
+
+  position: relative;
+  margin-top: -40px;
+}
+
+.widget .car-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-info .car {
+  display: flex;
+  align-items: center;
+}
+
+.widget .car-image {
+  margin-left: -45px;
+}
+
+.widget .contact {
+  display: flex;
+  gap: 32px;
+}
+
+.contact input {
+  flex: 1;
+  border: none;
+  padding: 17px 29px 18px;
+  border-radius: 24px;
+  background: #F5EDF7;
+  color: #372D3B;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.car-info .right h2 {
+  color: #372D3B;
+  font-size: 41.096px;
+  font-weight: 700;
+}
+
+.car-info p {
+  color: #372D3B;
+  font-size: 24.657px;
+  font-weight: 500;
+}
+
+.widget .buttons {
+  display: flex;
+  gap: 40px;
+}
