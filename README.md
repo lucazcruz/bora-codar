@@ -202,5 +202,14 @@
             <a href="https://lucazcruz.github.io/bora-codar/widget-de-transporte/"><img width="300px" src="./widget-de-transporte/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>20</td>
+          <td>
+            <a href="galeria-hover">Galeria Hover</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/galeria-hover/"><img width="300px" src="./galeria-hover/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
