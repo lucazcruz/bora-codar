@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Shopping Cart</title>
+</head>
+<body>
+  <div id="app">
+    <section class="cart">
+      <header>
+        <p class="heading">Seu carrinho tem <b>5 itens</b></p>
+        <button class="close-button">
+          <img src="./assets/Close.svg" alt="close button">
+        </button>
+      </header>
+      <div class="itens">
+
+        <div class="card">
+          <img src="./assets/product-image-monitor.jpg" alt="">
+          <div class="info">
+            <h2 class="paragraph">Monitor Gamer Curvo 49 DQHD, 240Hz, 1ms, HDMI e...</h2>
+            <div class="bottom">
+              <h3 class="number-sm">R$ 8.599,90</h3>
+              <div class="amount">
+                <button>
+                  <img src="./assets/Minus.svg" alt="">
+                </button>
+                <span class="number-sm">1</span>
+                <button>
+                  <img src="./assets/Plus.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./assets/product-image-cadeira.jpg" alt="">
+          <div class="info">
+            <h2 class="paragraph">Cadeira Gamer  RGB - Preta com Iluminação (Led)</h2>
+            <div class="bottom">
+              <h3 class="number-sm">R$ 959,90</h3>
+              <div class="amount">
+                <button class="minus-button">
+                  <img src="./assets/Minus.svg" alt="">
+                </button>
+                <span class="number-sm">1</span>
+                <button class="plus-button">
+                  <img src="./assets/Plus.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./assets/product-image-teclado.jpg" alt="">
+          <div class="info">
+            <h2 class="paragraph">Teclado Gamer Mecânico Low Profile RGB AW510K 580</h2>
+            <div class="bottom">
+              <h3 class="number-sm">R$ 1.002,00</h3>
+              <div class="amount">
+                <button class="minus-button">
+                  <img src="./assets/Minus.svg" alt="">
+                </button>
+                <span class="number-sm">1</span>
+                <button class="plus-button">
+                  <img src="./assets/Plus.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./assets/product-image-headset.jpg" alt="">
+          <div class="info">
+            <h2 class="paragraph">Headset Gamer RGB Preto</h2>
+            <div class="bottom">
+              <h3 class="number-sm">R$ 99,90</h3>
+              <div class="amount">
+                <button class="minus-button">
+                  <img src="./assets/Minus.svg" alt="">
+                </button>
+                <span class="number-sm">1</span>
+                <button class="plus-button">
+                  <img src="./assets/Plus.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <footer>
+        <div class="price">
+          <p class="heading">Total:</p>
+          <h2 class="number-lg">R$ 10.681,60</h2>
+        </div>
+        <label class="cupom" for="cupom-element">
+          <img src="./assets/Tag.svg" alt="tag cupom">
+          <input type="text" name="cupom-element" id="cupom-element" placeholder="Adicionar cupom">
+        </label>
+        <button class="buy-button">Finalizar compra</button>
+      </footer>
+    </section>
+  </div>
+
+  
+  
+</body>
+</html>
