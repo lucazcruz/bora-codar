@@ -105,3 +105,36 @@ main h1 {
     flex-direction: column;
   }
 }
+
+
+/* ANIMATIONS */
+
+[data-show="bottom"] {
+  animation: to-bottom .6s;
+}
+
+[data-show="top"] {
+  animation: to-top .6s;
+}
+
+@keyframes to-bottom {
+  from {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes to-top {
+  from {
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
