@@ -5,6 +5,14 @@
   font-family: 'Inter', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3c3c63;
+}
+
 :root {
   --brand-color: #9333ea;
   --brand-color-light: #a855f7;
@@ -71,6 +79,7 @@ button {
 }
 
 .card .info {
+  width: 234px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -96,10 +105,28 @@ button {
 }
 
 .card .amount button {
-  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 8px;
   border: 1.5px solid var(--brand-color-light, #A855F7);
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.card .amount button:disabled {
+  border: 1.5px solid var(--stroke-color, #3F3F46);
+}
+
+.card .amount button:not(:disabled):hover {
+  background: var(--brand-color, #9333EA);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.card .amount button:not(:disabled):hover svg path {
+  fill: var(--text-color-primary);
 }
 
 .cart {
@@ -162,6 +189,10 @@ button {
   line-height: 24px;
 }
 
+.cart footer .buy-button:hover {
+  background: var(--brand-color-light, #A855F7);
+}
+
 .cart footer .cupom {
   display: flex;
   justify-content: end;
@@ -174,6 +205,7 @@ button {
   width: 130px;
   background-color: transparent;
   border: none;
+  border-bottom: 2px solid transparent;
 
   color: var(--brand-color-light, #A855F7);
   font-size: 16px;
@@ -188,4 +220,8 @@ button {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+
+.cart footer #cupom-element:not(:placeholder-shown) {
+  border-bottom: 2px solid var(--brand-color-light);
 }
