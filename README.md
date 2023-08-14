@@ -211,5 +211,14 @@
             <a href="https://lucazcruz.github.io/bora-codar/galeria-hover/"><img width="300px" src="./galeria-hover/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>21</td>
+          <td>
+            <a href="shopping-cart">Shopping Cart</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/shopping-cart/"><img width="300px" src="./shopping-cart/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
