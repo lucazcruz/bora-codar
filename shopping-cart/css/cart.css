@@ -1,73 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
-
-::-webkit-scrollbar {
-  width: 2px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #3c3c63;
-}
-
-:root {
-  --brand-color: #9333ea;
-  --brand-color-light: #a855f7;
-  --brand-color-lighter: #c084fc;
-
-  --text-color-primary: #f9fafb;
-  --text-color-secondary: #e4e4e7;
-  --close-button-color: #a1a1aa;
-  --stroke-color: #3f3f46;
-  --surface-color: #18181b;
-}
-
-img {
-  display: block;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: transparent;
-}
-
-#app {
-  background: var(--background-color, #09090B);
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: end;
-}
-
-.number-lg,
-.heading {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  color: var(--text-color-primary, #F9FAFB);
-}
-
-.heading { 
-  font-weight: 500;
-  color: var(--text-color-secondary, #E4E4E7);
-}
-
-.number-sm,
-.paragraph {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  color: var(--text-color-secondary, #E4E4E7);
-}
-
-.paragraph { 
-  font-weight: 500;
-}
-
 .card {
   height: 104px;
   display: flex;
@@ -118,6 +48,7 @@ button {
 
 .card .amount button:disabled {
   border: 1.5px solid var(--stroke-color, #3F3F46);
+  cursor: initial;
 }
 
 .card .amount button:not(:disabled):hover {
