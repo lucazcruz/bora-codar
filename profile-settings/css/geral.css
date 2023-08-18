@@ -1,0 +1,86 @@
+#app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--gradient);
+}
+
+img.avatar {
+  border-radius: 8px;
+  display: block;
+  height: 48px;
+  width: 48px;
+}
+
+img.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.settings {
+  padding: 24px 24px 16px 24px;
+  border-radius: 12px;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400, #F4EFFA);
+  box-shadow: 0px 0px 0px 0px rgba(30, 30, 30, 0.10), 0px 3px 7px 0px rgba(30, 30, 30, 0.10), 0px 13px 13px 0px rgba(30, 30, 30, 0.09), 0px 29px 18px 0px rgba(30, 30, 30, 0.05), 0px 52px 21px 0px rgba(30, 30, 30, 0.01), 0px 82px 23px 0px rgba(30, 30, 30, 0.00);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.user {
+  display: flex;
+  gap: 16px;
+}
+
+.user div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.options .divider {
+  background: var(--gray-400);
+  width: 327px;
+  height: 1px;
+}
+
+.options div:not(.divider) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.options ul a {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.options ul a span {
+  flex: 1;
+}
+
+.options ul a img:not(.icon) {
+  width: 16px;
+  height: 16px;
+}
+
+.options ul a:hover img:not(.icon) {
+  transform: translateX(4px);
+  transition: .3s;
+}
+
+.sing-out {
+  color: var(--red);
+}

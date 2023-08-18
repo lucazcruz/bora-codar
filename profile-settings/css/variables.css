@@ -1,0 +1,47 @@
+:root {
+  --font-primary: 'Heebo', sans-serif;
+
+  --gray-100: #38343D;
+  --gray-200: #686071;
+  --gray-300: #797085;
+  --gray-400: #F4EFFA;
+  --gray-500: #FDFCFE;
+
+  --red: #AA2222;
+  --gradient: linear-gradient(135deg, #935FD3 0%, #9245F1 100%);
+}
+
+.title, .text-md, .text-sm, .text-xm {
+  font-family: var(--font-primary);
+}
+
+.title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+
+  color: var(--gray-100);
+}
+
+.text-md {
+  font-size: 16px;
+  line-height: 20px;
+
+  color: var(--gray-100);
+}
+
+.text-sm {
+  font-size: 14px;
+  line-height: 18px;
+
+  color: var(--gray-200);
+}
+
+.text-xm {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+
+  color: var(--gray-300);
+}
