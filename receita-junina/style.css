@@ -5,3 +5,95 @@
   font-family: 'Source Serif 4', serif;
 }
 
+img {
+  width: 100%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.wraper-top {
+  background: #FEECE0;
+  margin: 0 auto;
+  padding: 112px 15px 56px;
+  padding-top: 112px;
+  padding-bottom: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+}
+
+.receita-image {
+  max-width: 409px;
+}
+
+.receita-image img {
+  width: 100%;
+}
+
+.receita-info h1 {
+  color: #58190A;
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.receita-info p {
+  color: #58190A;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.receita-info .portion {
+  color: #9B6647;
+  font-size: 35px;
+  display: flex;
+  gap: 15px;
+}
+
+.receita-info .amount {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.amount span {
+  color: #9B6647;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.wraper-bottom {
+  background: #9B6647;
+  padding: 74px 15px 135px;
+
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+}
+
+.wraper-bottom h2 {
+  color: #FEECE0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.wraper-bottom .left,
+.wraper-bottom .right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.wraper-bottom ul,
+.wraper-bottom ol {
+  color: #FFF;
+  font-size: 28px;
+  font-weight: 400;
+  list-style-position: inside;
+}
