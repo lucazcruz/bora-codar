@@ -220,13 +220,22 @@
             <a href="https://lucazcruz.github.io/bora-codar/shopping-cart/"><img width="300px" src="./shopping-cart/screenshot.png" /></a>
           </td>
         </tr>
-         <tr>
+        <tr>
           <td>22</td>
           <td>
             <a href="profile-settings">Profile Settings</a>
           </td>
           <td align="center">
             <a href="https://lucazcruz.github.io/bora-codar/profile-settings/"><img width="300px" src="./profile-settings/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>
+            <a href="receita-junina">Receita Junina</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/receita-junina/"><img width="300px" src="./receita-junina/screenshot.png" /></a>
           </td>
         </tr>
     </tbody>
