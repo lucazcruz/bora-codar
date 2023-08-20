@@ -238,5 +238,14 @@
             <a href="https://lucazcruz.github.io/bora-codar/receita-junina/"><img width="300px" src="./receita-junina/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>27</td>
+          <td>
+            <a href="page-404">Page 404</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/page-404/"><img width="300px" src="./page-404/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
