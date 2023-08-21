@@ -6,13 +6,97 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./style.css">
 
   <title>Formulário Multi Step</title>
 </head>
 <body>
+  <div id="app">
+    <form>
+      <div class="steps">
+        <div data-step="1">
+          <span class="small-ball">1</span>
+          <p>Contato</p>
+        </div>
+        <img src="./assets/arrow.svg" alt="arrow-to-right.svg">
+
+        <div data-step="2">
+          <span class="small-ball">2</span>
+          <p>Empresa</p>
+        </div>
+        <img src="./assets/arrow.svg" alt="arrow-to-right.svg">
+
+        <div data-step="3">
+          <span class="small-ball">3</span>
+          <p>Projeto</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="step-1">
+        <div class="inputs">
+          <div class="input-box">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Como prefere ser chamado">
+          </div>
   
+          <div class="input-box">
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone" placeholder="Digite seu número de WhatsApp">
+          </div>
+  
+          <div class="input-box">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button>Continuar</button>
+        </div>
+      </div>
+
+      <div class="step-2">
+        <div class="inputs">
+          <div class="input-box">
+            <label for="company-name">Nome da empresa</label>
+            <input type="text" name="company-name" id="company-name" placeholder="Qual é o nome da empresa">
+          </div>
+  
+          <div class="input-box">
+            <label for="number-employees">Número de funcionários</label>
+            <input type="number" name="number-employees" id="number-employees" placeholder="Digite o número de colaboradores">
+          </div>
+  
+          <div class="input-box">
+            <label for="about-business">Sobre seu negócio</label>
+            <textarea name="about-business" id="about-business" placeholder="Fale um pouco sobre seus produtos ou serviços"></textarea>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="ghost">Voltar</button>
+          <button>Continuar</button>
+        </div>
+      </div>
+
+      <div class="step-3">
+        <div class="inputs">
+          <div class="input-box">
+            <label for="project-objectives">Objetivos do projeto</label>
+            <textarea name="project-objectives" id="project-objectives" placeholder="Fale um pouco sobre seus produtos ou serviços"></textarea>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="ghost">Voltar</button>
+          <button>Continuar</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </body>
 </html>

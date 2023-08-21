@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+form {
+  width: 100%;
+  max-width: 594px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  border-radius: 6px;
+  border: 1px solid var(--gray-100);
+  background: var(--white);
+}
+
+form .step-1 .buttons {
+  justify-content: end;
+}
+
+form .steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.steps [data-step] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+[data-step] p {
+  color: var(--gray-200);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+form .step-1,
+form .step-3 {
+  display: none;
+}
+
+[data-step].select .small-ball {
+  color: var(--white);
+  background: var(--purple-mid);
+}
+
+[data-step].active .small-ball {
+  color: var(--white);
+  background: var(--sucess-color);
+}
+
+[data-step].select p,
+[data-step].active p {
+  color: var(--gray-400);
+}
