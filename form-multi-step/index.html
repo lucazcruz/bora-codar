@@ -36,67 +36,72 @@
 
       <div class="divider"></div>
 
-      <div class="step-1">
-        <div class="inputs">
-          <div class="input-box">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" placeholder="Como prefere ser chamado">
+      <div class="steps-form">
+        <div class="step-1">
+          <div class="inputs">
+            <div class="input-box">
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome" placeholder="Como prefere ser chamado">
+            </div>
+    
+            <div class="input-box">
+              <label for="telefone">Telefone</label>
+              <input type="tel" name="telefone" id="telefone" placeholder="Digite seu número de WhatsApp">
+            </div>
+    
+            <div class="input-box">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+            </div>
           </div>
   
-          <div class="input-box">
-            <label for="telefone">Telefone</label>
-            <input type="tel" name="telefone" id="telefone" placeholder="Digite seu número de WhatsApp">
-          </div>
-  
-          <div class="input-box">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+          <div class="buttons">
+            <button class="next">Continuar</button>
           </div>
         </div>
-
-        <div class="buttons">
-          <button>Continuar</button>
+  
+        <div class="step-2">
+          <div class="inputs">
+            <div class="input-box">
+              <label for="company-name">Nome da empresa</label>
+              <input type="text" name="company-name" id="company-name" placeholder="Qual é o nome da empresa">
+            </div>
+    
+            <div class="input-box">
+              <label for="number-employees">Número de funcionários</label>
+              <input type="number" name="number-employees" id="number-employees" placeholder="Digite o número de colaboradores">
+            </div>
+    
+            <div class="input-box">
+              <label for="about-business">Sobre seu negócio</label>
+              <textarea name="about-business" id="about-business" placeholder="Fale um pouco sobre seus produtos ou serviços"></textarea>
+            </div>
+          </div>
+  
+          <div class="buttons">
+            <button class="ghost">Voltar</button>
+            <button class="next">Continuar</button>
+          </div>
+        </div>
+  
+        <div class="step-3">
+          <div class="inputs">
+            <div class="input-box">
+              <label for="project-objectives">Objetivos do projeto</label>
+              <textarea name="project-objectives" id="project-objectives" placeholder="Fale um pouco sobre seus produtos ou serviços"></textarea>
+            </div>
+          </div>
+  
+          <div class="buttons">
+            <button class="ghost">Voltar</button>
+            <button class="next">Continuar</button>
+          </div>
         </div>
       </div>
-
-      <div class="step-2">
-        <div class="inputs">
-          <div class="input-box">
-            <label for="company-name">Nome da empresa</label>
-            <input type="text" name="company-name" id="company-name" placeholder="Qual é o nome da empresa">
-          </div>
-  
-          <div class="input-box">
-            <label for="number-employees">Número de funcionários</label>
-            <input type="number" name="number-employees" id="number-employees" placeholder="Digite o número de colaboradores">
-          </div>
-  
-          <div class="input-box">
-            <label for="about-business">Sobre seu negócio</label>
-            <textarea name="about-business" id="about-business" placeholder="Fale um pouco sobre seus produtos ou serviços"></textarea>
-          </div>
-        </div>
-
-        <div class="buttons">
-          <button class="ghost">Voltar</button>
-          <button>Continuar</button>
-        </div>
-      </div>
-
-      <div class="step-3">
-        <div class="inputs">
-          <div class="input-box">
-            <label for="project-objectives">Objetivos do projeto</label>
-            <textarea name="project-objectives" id="project-objectives" placeholder="Fale um pouco sobre seus produtos ou serviços"></textarea>
-          </div>
-        </div>
-
-        <div class="buttons">
-          <button class="ghost">Voltar</button>
-          <button>Continuar</button>
-        </div>
-      </div>
+      
     </form>
   </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>

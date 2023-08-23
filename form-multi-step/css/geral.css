@@ -63,8 +63,9 @@ form .steps {
 }
 
 
-form .step-1,
-form .step-3 {
+/* JAVASCRIPT */
+
+.steps-form > div:not(.active) {
   display: none;
 }
 
