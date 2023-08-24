@@ -4,7 +4,7 @@
 
 ### 🔗 Links
 
-- Live Site URL: [Date Pickr](https://lucazcruz.github.io/bora-codar/data-picker/)
+- Live Site URL: [Date Picker](https://lucazcruz.github.io/bora-codar/data-picker/)
 
 ## 🚀 Build with
 
