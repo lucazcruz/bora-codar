@@ -1,0 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.heading {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 300;
+}
