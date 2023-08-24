@@ -36,8 +36,8 @@ button.ghost {
 
 .small-ball {
   background: var(--gray-100);
-  width: 28px;
-  height: 28px;
+  width: clamp(20px, +5vw, 28px);
+  height: clamp(20px, +5vw, 28px);
 
   display: flex;
   justify-content: center;
