@@ -38,11 +38,11 @@ class MultiStep {
 
   addEvents() {
     this.nextButtons.forEach((btn, index) => {
-      btn.addEventListener("click", (e) => nextStep(e, index));
+      btn.addEventListener("click", (e) => this.nextStep(e, index));
     })
     
     this.backButtons.forEach((btn, index) => {
-      btn.addEventListener("click", (e) => backStep(e, index));
+      btn.addEventListener("click", (e) => this.backStep(e, index));
     })
   }
 
