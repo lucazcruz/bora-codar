@@ -239,6 +239,15 @@
           </td>
         </tr>
         <tr>
+          <td>24</td>
+          <td>
+            <a href="lighting-adjustments">Lighting Adjustments</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/lighting-adjustments/"><img width="300px" src="./lighting-adjustments/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
           <td>26</td>
           <td>
             <a href="receita-junina">Receita Junina</a>
