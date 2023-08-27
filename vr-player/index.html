@@ -13,6 +13,105 @@
   <title>Player de VR</title>
 </head>
 <body>
-  
+  <main id="app">
+    <aside class="side-menu">
+      <button class="default-btn">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </button>
+
+      <button class="default-btn">
+        <ion-icon name="accessibility-outline"></ion-icon>
+      </button>
+
+      <button class="default-btn">
+        <ion-icon name="albums-outline"></ion-icon>
+      </button>
+
+      <button class="default-btn">
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+    </aside>
+    <section class="column">
+      <nav class="navbar">
+        <div class="actions">
+          <button class="default-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+              <path d="M19 1H3C1.89543 1 1 1.89543 1 3V17C1 18.1046 1.89543 19 3 19H19C20.1046 19 21 18.1046 21 17V3C21 1.89543 20.1046 1 19 1Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 1V19" stroke="white" stroke-width="1.5"/>
+            </svg>
+          </button>
+
+          <button class="default-btn">
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
+
+          <button class="default-btn">
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
+        </div>
+
+        <div class="adress-bar">
+          <span>
+            <ion-icon name="text"></ion-icon>
+          </span>
+
+          <label>
+            <ion-icon name="lock-closed"></ion-icon>
+            <input type="text" name="search-bar" id="search-bar" value="rocketseat.com">
+          </label>
+
+          <button class="default-btn">
+            <ion-icon name="refresh"></ion-icon>
+          </button>
+        </div>
+
+        <div class="actions">
+          <button class="default-btn">
+            <ion-icon name="share-outline"></ion-icon>
+          </button>
+
+          <button class="default-btn">
+            <ion-icon name="add-outline"></ion-icon>
+          </button>
+
+          <button class="default-btn">
+            <ion-icon name="copy-outline"></ion-icon>
+          </button>
+        </div>
+      </nav>
+      <iframe class="screen" width="960" height="540" src="https://www.youtube.com/embed/uL6nu0-zhu0?si=qm1J3EqLh-CwrSf_?autoplay=1&controls=0&enablejsapi=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="interaction">
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+          <g filter="url(#filter0_b_505_90)">
+            <circle cx="4" cy="4" r="4" fill="white" fill-opacity="0.6"/>
+          </g>
+          <defs>
+            <filter id="filter0_b_505_90" x="-4" y="-4" width="16" height="16" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+              <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_505_90"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_505_90" result="shape"/>
+            </filter>
+          </defs>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="86" height="8" viewBox="0 0 86 8" fill="none">
+          <g filter="url(#filter0_b_508_167)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4C0 1.79086 1.4809 0 3.30769 0H82.6923C84.5191 0 86 1.79086 86 4C86 6.20914 84.5191 8 82.6923 8H3.30769C1.4809 8 0 6.20914 0 4Z" fill="white" fill-opacity="0.6"/>
+          </g>
+          <defs>
+            <filter id="filter0_b_508_167" x="-4" y="-4" width="94" height="16" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+              <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_508_167"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_508_167" result="shape"/>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

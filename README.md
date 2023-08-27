@@ -248,6 +248,15 @@
           </td>
         </tr>
         <tr>
+          <td>25</td>
+          <td>
+            <a href="vr-player">Player de VR</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/vr-player/"><img width="300px" src="./vr-player/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
           <td>26</td>
           <td>
             <a href="receita-junina">Receita Junina</a>

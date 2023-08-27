@@ -1,3 +1,12 @@
+:root {
+  --black-10: rgba(0, 0, 0, .10);
+  --white-10: rgba(255, 255, 255, .10);
+  --white-20: rgba(255, 255, 255, .20);
+  --white-60: rgba(255, 255, 255, .60);
+  --white-80: rgba(255, 255, 255, .80);
+  --white-100: rgba(255, 255, 255, 1);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +14,128 @@
   font-family: 'Inter', sans-serif;
 }
 
-.text {
+body {
+  background: url("./assets/background.jpeg") center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+svg, ion-icon {
+  display: block;
+  color: #fff;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.default-btn {
+  font-size: 24px;
+  border-radius: 80px;
+  padding: 8px;
+}
+
+.default-btn:hover {
+  background: var(--white-20);
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.side-menu {
+  padding: 12px;
+  border-radius: 80px;
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.05), 
+              0px 1px 1px 0px rgba(255, 255, 255, 0.30) inset, 
+              0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset;
+  backdrop-filter: blur(16px);
+
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.column .screen {
+  background: green;
+  height: 540px;
+  width: 960px;
+
+  border-radius: 32px;
+  box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+.column .navbar {
+  padding: 8px 12px;
+  border-radius: 80px;
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.05), 
+              0px rgba(255, 255, 255, 0.30) inset, 
+              0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset;
+  backdrop-filter: blur(16px);
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  max-width: 816px;
+  width: 100%;
+}
+
+.navbar .actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar .adress-bar {
+  padding: 12px;
+  border-radius: 80px;
+  background: rgba(0, 0, 0, 0.10);
+  box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.10) inset, 
+              0px 1px 0px 0px rgba(0, 0, 0, 0.20) inset;
+
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .adress-bar label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar .adress-bar input {
+  color: var(--white-80);
   font-size: 15px;
-  line-height: 24%;
+  line-height: 24px;
+
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.interaction {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
