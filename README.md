@@ -283,5 +283,14 @@
             <a href="https://lucazcruz.github.io/bora-codar/plataforma-de-ia/"><img width="300px" src="./plataforma-de-ia/screenshot.png" /></a>
           </td>
         </tr>
+         <tr>
+          <td>30</td>
+          <td>
+            <a href="ai-movie-recommendation">Recomendação de Filme com IA</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/ai-movie-recommendation/"><img width="300px" src="./ai-movie-recommendation/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
