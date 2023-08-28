@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
