@@ -274,5 +274,14 @@
             <a href="https://lucazcruz.github.io/bora-codar/page-404/"><img width="300px" src="./page-404/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>28</td>
+          <td>
+            <a href="plataforma-de-ia">Plataforma de IA</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/plataforma-de-ia/"><img width="300px" src="./plataforma-de-ia/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
