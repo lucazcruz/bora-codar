@@ -25,6 +25,7 @@ ul {
 
 img {
   display: block;
+  width: 100%;
 }
 
 button {
@@ -54,6 +55,8 @@ body {
   background-size: cover;
   min-height: 100vh;
 
+  padding: 15px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,6 +64,7 @@ body {
 
 #app {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   max-width: 1216px;
   width: 100%;
@@ -120,6 +124,11 @@ body {
   padding: 16px 12px;
 }
 
+.texts .content .input img {
+  width: 20px;
+  height: 20px;
+}
+
 .texts .content input {
   border: none;
   outline: none;
@@ -139,7 +148,7 @@ body {
 
 .card-ticket {
   background: var(--purple-normal);
-  padding: 45px 38px;
+  padding: 38px;
   display: flex;
   align-items: center;
 
@@ -151,10 +160,12 @@ body {
   background: var(--white);
   padding: 16px;
 
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 33px;
+
+  max-width: 266px;
+  
 }
 
 .card-ticket .content-user {
@@ -207,4 +218,33 @@ body {
 .card-ticket .info-event li b {
   display: block;
   width: 110px;
+}
+
+@media (max-width: 1140px) {
+  .card-ticket {
+    padding: 4px;
+  }
+}
+
+@media (max-width: 1070px) {
+  #app {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .texts {
+    max-width: 384px;
+  }
+  .card-ticket {
+    max-width: 621px;
+  }
+}
+
+@media (max-width: 660px) {
+  #app {
+    margin-top: 30px;
+  }
+  .card-ticket {
+    max-width: 266px;
+    flex-direction: column-reverse;
+  }
 }
