@@ -1,0 +1,210 @@
+:root {
+  --purple-normal: #8860E6;
+  --purple-dark: #5B409B;
+
+  --gray-dark: #202024;
+  --gray-light: #F3F4FE;
+  --white: #FFFFFF;
+
+  --sucess: #04D361;
+  --danger: #FF8F8F;
+
+  --gradient: linear-gradient(90deg, #DEE0FC, #996DFF, #BC9FFF);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.primary-button {
+  padding: 22px 40px;
+  background: var(--purple-normal);
+
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.primary-button:hover {
+  background: var(--purple-dark);
+}
+
+body {
+  background: url('./assets/background.png') center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1216px;
+  width: 100%;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  max-width: 490px;
+  width: 100%;
+}
+
+.texts h1 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 130%;
+  text-transform: uppercase;
+
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.texts .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  max-width: 384px;
+  width: 100%;
+
+}
+
+.texts .content label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.texts .content span {
+  color: var(--gray-light);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+
+.texts .content .input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: var(--gray-light, #F3F4FE);
+  padding: 16px 12px;
+}
+
+.texts .content input {
+  border: none;
+  outline: none;
+  flex: 1;
+
+  background: var(--gray-light, #F3F4FE);
+  color: var(--gray-dark);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.texts .content input::placeholder {
+  color: var(--gray-dark);
+}
+
+.card-ticket {
+  background: var(--purple-normal);
+  padding: 45px 38px;
+  display: flex;
+  align-items: center;
+
+  max-width: 694px;
+  width: 100%;
+}
+
+.card-ticket .infos-user {
+  background: var(--white);
+  padding: 16px;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.card-ticket .content-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-ticket .content-user img {
+  width: 127px;
+  height: 128px;
+}
+
+.card-ticket .content-user p {
+  color: var(--purple-normal);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: 1.26px;
+  text-transform: uppercase;
+}
+
+.card-ticket .content-user h3 {
+  color: var(--gray-dark);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.card-ticket .info-event {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-ticket .info-event li {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--gray-dark);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1.05px;
+  text-transform: uppercase;
+}
+
+.card-ticket .info-event li b {
+  display: block;
+  width: 110px;
+}
