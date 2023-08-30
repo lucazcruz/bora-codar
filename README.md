@@ -283,7 +283,16 @@
             <a href="https://lucazcruz.github.io/bora-codar/plataforma-de-ia/"><img width="300px" src="./plataforma-de-ia/screenshot.png" /></a>
           </td>
         </tr>
-         <tr>
+        <tr>
+          <td>29</td>
+          <td>
+            <a href="antes-e-depois">Antes e Depois</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/antes-e-depois/"><img width="300px" src="./antes-e-depois/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
           <td>30</td>
           <td>
             <a href="ai-movie-recommendation">Recomendação de Filme com IA</a>
