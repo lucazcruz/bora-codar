@@ -18,11 +18,18 @@
       <h1>gere seu ticket<br>e compartilhe<br>com o mundo</h1>
       <div class="content">
         <label for="githubUser">
-          <span>Digite seu usuário do GitHub</span>
-
-          <div class="input">
-            <img src="./assets/logo-github.svg" alt="logo GitHub">
-            <input type="text" name="githubUser" id="githubUser" placeholder="Nome de usuário">
+          <p>Digite seu usuário do GitHub</p>
+          <p id="sucess">
+            <img src="./assets/sucess.svg" alt="sucess icon">
+            Ticket gerado com sucesso
+          </p>
+          
+          <div>
+            <div class="input">
+              <img src="./assets/logo-github.svg" alt="logo GitHub">
+              <input type="text" name="githubUser" id="githubUser" placeholder="Nome de usuário">
+            </div>
+            <p id="danger">Usuário inválido. Verifique e tente novamente.</p>
           </div>
         </label>
         <button class="primary-button">Gerar meu ticket</button>
@@ -90,5 +97,7 @@
       </div>
     </div>
   </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
