@@ -301,5 +301,14 @@
             <a href="https://lucazcruz.github.io/bora-codar/ai-movie-recommendation/"><img width="300px" src="./ai-movie-recommendation/screenshot.png" /></a>
           </td>
         </tr>
+        <tr>
+          <td>33</td>
+          <td>
+            <a href="gerador-de-ticket">Gerador de Ticket</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/gerador-de-ticket/"><img width="300px" src="./gerador-de-ticket/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
