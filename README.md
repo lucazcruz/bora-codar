@@ -302,6 +302,15 @@
           </td>
         </tr>
         <tr>
+          <td>31</td>
+          <td>
+            <a href="transcription-video">Transcription Video</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/transcription-video/"><img width="300px" src="./transcription-video/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
           <td>33</td>
           <td>
             <a href="gerador-de-ticket">Gerador de Ticket</a>
