@@ -261,6 +261,11 @@ body {
   display: none;
 }
 
+#sucess img {
+  width: 32px;
+  height: 32px;
+}
+
 #danger {
   color: var(--danger);
   font-family: 'Roboto', sans-serif;
