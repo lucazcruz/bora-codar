@@ -311,6 +311,15 @@
           </td>
         </tr>
         <tr>
+          <td>32</td>
+          <td>
+            <a href="https://github.com/lucazcruz/sql-translation-app/tree/main">Transcription Video</a>
+          </td>
+          <td align="center">
+            <a href="https://github.com/lucazcruz/sql-translation-app/tree/main"><img width="300px" src="./slq-translation-app/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
           <td>33</td>
           <td>
             <a href="gerador-de-ticket">Gerador de Ticket</a>
