@@ -1,0 +1,158 @@
+.item {
+  background: var(--gray-400);
+  border-radius: 8px;
+  border: 1px solid var(--gray-300);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.item h3 {
+  color: var(--gray-100);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.item p {
+  color: var(--gray-200);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.item .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--purple-light);
+  border-radius: 4px;
+  position: relative;
+}
+
+.item .checkbox input {
+  all: unset;
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  cursor: pointer;
+}
+
+.item .checkbox svg {
+  display: none;
+  color: var(--gray-100);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  z-index: 1;
+}
+
+.item .checkbox:hover {
+  background: var(--purple);
+}
+
+.item .checkbox:has(input:checked) {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.item .checkbox:has(input:checked):hover {
+  border-color: var(--success-light);
+  background: var(--success-light);
+}
+
+.item .checkbox:has(input:checked) svg {
+  display: block;
+}
+
+
+.item .col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item [data-category] {
+  padding: 8px 16px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+
+  border-radius: 999px;
+ 
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.item:has(input:checked) [data-category] {
+  opacity: 0.5;
+}
+
+.item:has(input:checked) {
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+}
+
+.item:has(input:checked) h3 {
+  text-decoration: line-through;
+}
+
+.item:has(input:checked) .col {
+  opacity: .5;
+}
+
+/* CATEGORIA */
+
+[data-category="fruta"] {
+  background: var(--orange-dark);
+  color: var(--orange);
+}
+
+.item:has(input:checked) [data-category="fruta"] {
+  background: var(--orange-dark);
+}
+
+[data-category="padaria"] {
+  background: var(--yellow-dark);
+  color: var(--yellow);
+}
+
+.item:has(input:checked) [data-category="padaria"] {
+  background: var(--yellow-dark);
+}
+
+[data-category="legume"] {
+  background: var(--green-dark);
+  color: var(--green);
+}
+
+.item:has(input:checked) [data-category="legume"] {
+  background: var(--green-dark);
+}
+
+[data-category="bebida"] {
+  background: var(--blue-dark);
+  color: var(--blue);
+}
+
+.item:has(input:checked) [data-category="bebida"] {
+  background: var(--blue-dark);
+}
+
+[data-category="carne"] {
+  background: var(--pink-dark);
+  color: var(--pink);
+}
+
+.item:has(input:checked) [data-category="carne"] {
+  background: var(--pink-dark);
+}

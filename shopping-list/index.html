@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Lista de Compras</title>
+</head>
+<body>
+
+ 
+  <div id="app">
+    <header>
+      <h1>Lista de Compras</h1>
+      <form>
+        <div class="input">
+          <label for="item-name">Item</label>
+          <input type="text" name="item" id="item-name">
+        </div>
+        <div class="unit">
+          <label for="unities">Quantidade</label>
+
+          <div class="field">
+            <input type="text" id="unities">
+            <div class="select" id="unities-select">
+              <div id="category-select">
+                <input type="checkbox" id="options-view-button">
+            
+                <div id="select-button">
+                  <div id="selected-value">UN.</div>
+            
+                  <div id="chevrons">
+                    <i data-lucide="chevron-down"></i>
+                    <i data-lucide="chevron-up"></i>
+                  </div>
+                </div>
+              </div>
+            
+              <ul id="options">
+                <li class="option">
+                  <input type="radio" name="unit-type" value="unit" data-label="Unidade" checked>
+                  <span>Un.</span>
+                  <i data-lucide="check"></i>
+                </li>
+            
+                <li class="option">
+                  <input type="radio" name="unit-type" value="l" data-label="Litro">
+                  <span>L</span>
+                  <i data-lucide="check"></i>
+                </li>
+            
+                <li class="option">
+                  <input type="radio" name="unit-type" value="kg" data-label="Kilograma">
+                  <span>Kg</span>
+                  <i data-lucide="check"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="select">
+          <div id="category-select">
+            <label for="options-view-button">Categoria</label>
+            <input type="checkbox" id="options-view-button">
+      
+            <div id="select-button">
+              <div id="selected-value">Selecione</div>
+      
+              <div id="chevrons">
+                <i data-lucide="chevron-down"></i>
+                <i data-lucide="chevron-up"></i>
+              </div>
+            </div>
+          </div>
+      
+          <ul id="options">
+            <li class="option">
+              <input type="radio" name="category" value="bakery" data-label="Padaria">
+              <i data-lucide="sandwich"></i>
+              <span>Padaria</span>
+              <i data-lucide="check"></i>
+            </li>
+      
+            <li class="option">
+              <input type="radio" name="category" value="vegetable" data-label="Legume">
+              <i data-lucide="carrot"></i>
+              <span>Legume</span>
+              <i data-lucide="check"></i>
+            </li>
+      
+            <li class="option">
+              <input type="radio" name="category" value="meet" data-label="Fruta">
+              <i data-lucide="apple"></i>
+              <span>Fruta</span>
+              <i data-lucide="check"></i>
+            </li>
+      
+            <li class="option">
+              <input type="radio" name="category" value="fruit" data-label="Carne">
+              <i data-lucide="beef"></i>
+              <span>Carne</span>
+              <i data-lucide="check"></i>
+            </li>
+            <li class="option">
+              <input type="radio" name="category" value="drink" data-label="Bebida">
+              <i data-lucide="milk"></i>
+              <span>Bebida</span>
+              <i data-lucide="check"></i>
+            </li>
+          </ul>
+        </div>
+        <button type="submit" class="submit-button">
+          <i data-lucide="plus"></i>
+        </button>
+      </form>
+    </header>
+
+    <main>
+      <div class="item">
+        <div class="flex g-16">
+          <div class="checkbox">
+            <input type="checkbox" name="" id="">
+            <i data-lucide="check"></i>
+          </div>
+          <div class="col">
+            <h3>Maçã</h3>
+            <p>6 unidade</p>
+          </div>
+        </div>
+        <div class="flex g-12">
+          <span data-category="legume" >
+            fruta
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 9.99998C8.33325 9.07951 9.07944 8.33331 9.99992 8.33331C10.9204 8.33331 11.6666 9.07951 11.6666 9.99998C11.6666 10.9205 10.9204 11.6666 9.99992 11.6666C9.07944 11.6666 8.33325 10.9205 8.33325 9.99998Z" fill="#A881E6"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 4.16667C8.33325 3.24619 9.07944 2.5 9.99992 2.5C10.9204 2.5 11.6666 3.24619 11.6666 4.16667C11.6666 5.08714 10.9204 5.83333 9.99992 5.83333C9.07944 5.83333 8.33325 5.08714 8.33325 4.16667Z" fill="#A881E6"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 15.8334C8.33325 14.9129 9.07944 14.1667 9.99992 14.1667C10.9204 14.1667 11.6666 14.9129 11.6666 15.8334C11.6666 16.7538 10.9204 17.5 9.99992 17.5C9.07944 17.5 8.33325 16.7538 8.33325 15.8334Z" fill="#A881E6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="item">
+        <div class="flex g-16">
+          <div class="checkbox">
+            <input type="checkbox" name="" id="">
+            <i data-lucide="check"></i>
+          </div>
+          <div class="col">
+            <h3>Maçã</h3>
+            <p>6 unidade</p>
+          </div>
+        </div>
+        <div class="flex g-12">
+          <span data-category="carne" >
+            fruta
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 9.99998C8.33325 9.07951 9.07944 8.33331 9.99992 8.33331C10.9204 8.33331 11.6666 9.07951 11.6666 9.99998C11.6666 10.9205 10.9204 11.6666 9.99992 11.6666C9.07944 11.6666 8.33325 10.9205 8.33325 9.99998Z" fill="#A881E6"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 4.16667C8.33325 3.24619 9.07944 2.5 9.99992 2.5C10.9204 2.5 11.6666 3.24619 11.6666 4.16667C11.6666 5.08714 10.9204 5.83333 9.99992 5.83333C9.07944 5.83333 8.33325 5.08714 8.33325 4.16667Z" fill="#A881E6"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 15.8334C8.33325 14.9129 9.07944 14.1667 9.99992 14.1667C10.9204 14.1667 11.6666 14.9129 11.6666 15.8334C11.6666 16.7538 10.9204 17.5 9.99992 17.5C9.07944 17.5 8.33325 16.7538 8.33325 15.8334Z" fill="#A881E6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="item">
+        <div class="flex g-16">
+          <div class="checkbox">
+            <input type="checkbox" name="" id="">
+            <i data-lucide="check"></i>
+          </div>
+          <div class="col">
+            <h3>Maçã</h3>
+            <p>6 unidade</p>
+          </div>
+        </div>
+        <div class="flex g-12">
+          <span data-category="legume" >
+            fruta
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 9.99998C8.33325 9.07951 9.07944 8.33331 9.99992 8.33331C10.9204 8.33331 11.6666 9.07951 11.6666 9.99998C11.6666 10.9205 10.9204 11.6666 9.99992 11.6666C9.07944 11.6666 8.33325 10.9205 8.33325 9.99998Z" fill="#A881E6"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 4.16667C8.33325 3.24619 9.07944 2.5 9.99992 2.5C10.9204 2.5 11.6666 3.24619 11.6666 4.16667C11.6666 5.08714 10.9204 5.83333 9.99992 5.83333C9.07944 5.83333 8.33325 5.08714 8.33325 4.16667Z" fill="#A881E6"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 15.8334C8.33325 14.9129 9.07944 14.1667 9.99992 14.1667C10.9204 14.1667 11.6666 14.9129 11.6666 15.8334C11.6666 16.7538 10.9204 17.5 9.99992 17.5C9.07944 17.5 8.33325 16.7538 8.33325 15.8334Z" fill="#A881E6"/>
+          </svg>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

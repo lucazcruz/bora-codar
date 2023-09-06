@@ -1,0 +1,145 @@
+body {
+  background: var(--gray-500);
+  background-image: url('../assets/bgg.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.g-12 {
+  gap: 12px;
+}
+
+.g-16 {
+  gap: 12px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  width: 100%;
+  margin: 88px auto 0;
+}
+
+#app h1 {
+  color: var(--gray-100);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.72px;
+  margin-bottom: 32px;
+}
+
+#app form {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 12px;
+}
+
+form .input {
+  max-width: 326px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input label,
+.unit label {
+  color: var(--gray-200);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.36px;
+}
+
+.input input {
+  border: 1px solid var(--gray-300);
+  background: var(--gray-500);
+  border-radius: 6px;
+  padding: 12px;
+
+  color: var(--gray-100);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.42px;
+}
+
+.input:has(:focus) label {
+  color: var(--purple-light);
+}
+
+.input input:focus {
+  outline: 1px solid var(--purple-light);
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 150px;
+  width: 100%;
+}
+
+.unit .field {
+  display: flex;
+}
+
+.unit .field input[type="text"] {
+  max-width: 79px;
+  background: var(--gray-500);
+  border-radius: 6px 0px 0px 6px;
+  border: 1px solid var(--gray-300);
+  padding: 12px;
+
+  color: var(--gray-100);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.42px;
+}
+
+.unit .field input[type="text"]:focus {
+  outline: 1px solid var(--purple-light);
+}
+
+#app .submit-button {
+  height: 40px;
+  margin-top: auto;
+  border-radius: 999px;
+  padding: 8px;
+  background: var(--purple);
+}
+
+.submit-button:hover {
+  background: var(--purple-dark);
+}
+
+.submit-button svg{
+  color: var(--gray-100);
+  width: 24px;
+  height: 24px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

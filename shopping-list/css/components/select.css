@@ -1,0 +1,154 @@
+.select {
+  max-width: 168px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.select label {
+  color: #EDEAF0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.36px;
+}
+
+#category-select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+#options-view-button {
+  all: unset;
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+}
+
+#select-button {
+  background: var(--gray-400);
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#selected-value {
+  color: var(--gray-200);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.42px;
+}
+
+#chevrons svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: var(--gray-200);
+}
+
+#chevrons [data-lucide="chevron-up"] {
+  display: none;
+}
+
+#category-select:has(#options-view-button:checked) label {
+  color: var(--purple-light);
+} 
+
+#options-view-button:focus + #select-button,
+#options-view-button:checked + #select-button {
+  outline: 1px solid var(--purple-light);
+}
+
+#category-select:has(#options-view-button:checked) #chevrons [data-lucide="chevron-down"] {
+  display: none;
+}
+
+#category-select:has(#options-view-button:checked) #chevrons [data-lucide="chevron-up"] {
+  display: block;
+}
+
+#category-select:has(#options-view-button:checked) + #options {
+  display: block;
+}
+#options {
+  display: none;
+  margin-top: 4px;
+
+  background: var(--gray-400);
+  border-radius: 6px;
+  border: 1px solid var(--gray-300);
+
+  position: absolute;
+  width: 100%;
+}
+
+.option {
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--gray-100);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.42px;
+
+  border-bottom: 1px solid var(--gray-300);
+  position: relative;
+}
+
+.option svg {
+  width: 16px;
+  height: 16px;
+}
+
+.option svg:last-child {
+  margin-left: auto;
+  color: var(--purple-light);
+  display: none;
+}
+
+.option:has(input:checked),
+.option:hover {
+  background: var(--gray-300);
+}
+
+.option:has(input:focus) {
+  outline: 1px solid var(--purple-light);
+}
+
+.option:has(input:checked) [data-lucide="check"] {
+  display: block;
+}
+
+.option:nth-child(1) :nth-child(2) { color: var(--yellow);}
+.option:nth-child(2) :nth-child(2) { color: var(--green);}
+.option:nth-child(3) :nth-child(2) { color: var(--pink);}
+.option:nth-child(4) :nth-child(2) { color: var(--orange);}
+.option:nth-child(5) :nth-child(2) { color: var(--blue);}
+
+.option input[type="radio"] {
+  all: unset;
+  position: absolute;  
+  inset: 0;
+}
+
+#unities-select #select-button {
+  border-radius: 0px 6px 6px 0px;
+  border-left: none;
+}
+
+#unities-select #options span {
+  color: var(--gray-100);
+}
