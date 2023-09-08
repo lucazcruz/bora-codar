@@ -1,0 +1,19 @@
+@media (max-width: 586px) {
+  form {
+    flex-wrap: wrap;
+  }
+
+  form .input {
+    max-width: none;
+  }
+
+  .unit {
+    flex: 1;
+    max-width: none;
+  }
+
+  form .select {
+    max-width: none;
+    flex: 1;
+  }
+}

@@ -1,9 +1,9 @@
 body {
   background: var(--gray-500);
-  background-image: url('../assets/bgg.png');
+  background-image: url('../assets/bg.png');
   background-repeat: no-repeat;
   background-position: top left;
-
+  padding: 15px;
 }
 
 input[type="checkbox"] {
