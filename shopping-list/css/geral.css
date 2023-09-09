@@ -23,6 +23,13 @@ input[type="checkbox"] {
   gap: 12px;
 }
 
+.moreButton svg {
+  color: var(--purple-light);
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
 #app {
   display: flex;
   flex-direction: column;

@@ -21,7 +21,7 @@
   position: relative;
 }
 
-#options-view-button {
+.options-view-button {
   all: unset;
   position: absolute;
   z-index: 4;
@@ -39,7 +39,7 @@
   justify-content: space-between;
 }
 
-#selected-value {
+.selected-value {
   color: var(--gray-200);
   font-size: 14px;
   font-weight: 400;
@@ -58,24 +58,24 @@
   display: none;
 }
 
-#category-select:has(#options-view-button:checked) label {
+#category-select:has(.options-view-button:checked) label {
   color: var(--purple-light);
 } 
 
-#options-view-button:focus + #select-button,
-#options-view-button:checked + #select-button {
+.options-view-button:focus + #select-button,
+.options-view-button:checked + #select-button {
   outline: 1px solid var(--purple-light);
 }
 
-#category-select:has(#options-view-button:checked) #chevrons [data-lucide="chevron-down"] {
+#category-select:has(.options-view-button:checked) #chevrons [data-lucide="chevron-down"] {
   display: none;
 }
 
-#category-select:has(#options-view-button:checked) #chevrons [data-lucide="chevron-up"] {
+#category-select:has(.options-view-button:checked) #chevrons [data-lucide="chevron-up"] {
   display: block;
 }
 
-#category-select:has(#options-view-button:checked) + #options {
+#category-select:has(.options-view-button:checked) + #options {
   display: block;
 }
 #options {
