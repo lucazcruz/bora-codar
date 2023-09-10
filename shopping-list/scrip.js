@@ -2,16 +2,28 @@ class ShoppingList {
   constructor() {
     this.form = document.forms[0];
     this.main = document.querySelector("main");
+
     this.addNewItem = this.addNewItem.bind(this);
+  }
+
+  getData() {
+    const data = JSON.parse(localStorage.getItem("shoppingList")) || [];
+    return data;
+  }
+
+  saveData(newData) {
+    localStorage.setItem("shoppingList", JSON.stringify(newData));
   }
 
   createItem(formData) {
     const item = document.createElement("div");
     item.classList.add("item")
+
+    const checked = formData.checked ? "checked" : "";
     item.innerHTML = `  
       <div class="flex g-16">
         <div class="checkbox">
-          <input type="checkbox" name="" id="">
+          <input type="checkbox" ${checked}>
           <i data-lucide="check"></i>
         </div>
         <div class="col">
@@ -35,26 +47,37 @@ class ShoppingList {
     e.preventDefault();
     const formPrototype = new FormData(this.form);
     const formData = Object.fromEntries(formPrototype);
+    formData.checked= false;
 
+    const data = this.getData();
+    const newData = [...data, formData];
 
-    this.saveData(formData)
-    this.loadData()
-    
+    this.saveData(newData);
+    this.loadData();
   }
 
-  saveData(formData) {
-    this.data = JSON.parse(localStorage.getItem("data")) || [];
-    const newData = [...this.data, formData];
-    localStorage.setItem("data", JSON.stringify(newData));
+  isChecked(index) {
+    const data = this.getData();
+
+    if (data[index].checked) {
+      data[index].checked = false;
+      this.saveData(data);
+      return
+    }
+
+    data[index].checked = true;
+    this.saveData(data);
   }
 
   loadData() {
     this.main.innerHTML= "";
-    this.data = JSON.parse(localStorage.getItem("data")) || [];
-    this.data.forEach(element => {
+    const data = this.getData();
+    data.forEach((element, index) => {
       const item = this.createItem(element);
+      item.addEventListener("change", (e) => this.isChecked(index))
       this.main.appendChild(item)
     });
+
     lucide.createIcons();
   }
 
