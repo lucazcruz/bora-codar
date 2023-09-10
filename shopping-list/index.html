@@ -21,13 +21,13 @@
       <form>
         <div class="input">
           <label for="item-name">Item</label>
-          <input type="text" name="item" id="item-name">
+          <input type="text" name="item" id="item-name" required>
         </div>
         <div class="unit">
           <label for="unities">Quantidade</label>
 
           <div class="field">
-            <input type="text" id="unities" name="unities">
+            <input type="text" id="unities" name="unities" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
             <div class="select" id="unities-select">
               <div id="category-select">
                 <input type="checkbox" class="options-view-button">
