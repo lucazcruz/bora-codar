@@ -41,9 +41,21 @@ class ShoppingList {
         <span data-category="${formData.category.toLowerCase()}" >
           ${formData.category}
         </span>
-        <button class="moreButton">
-          <i data-lucide="more-vertical"></i>
-        </button>
+        <div class="buttons">
+            <div class="moreButton">
+              <i data-lucide="more-vertical"></i>
+              <input type="checkbox">
+            </div>
+
+            <div class="modal">
+              <button class="editButton">
+                <i data-lucide="pencil"></i>
+              </button>
+              <button class="deleteButton">
+                <i data-lucide="trash-2"></i>
+              </button>
+            </div>
+          </div>
       </div>
     `
     return item;
@@ -76,7 +88,7 @@ class ShoppingList {
   }
 
   loadData() {
-    this.main.innerHTML= "";
+    // this.main.innerHTML= "";
     const data = this.getData();
     data.forEach((element, index) => {
       const item = this.createItem(element);

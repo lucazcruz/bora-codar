@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px;
+  position: relative;
 }
 
 .item h3 {
@@ -72,7 +73,6 @@
   display: block;
 }
 
-
 .item .col {
   display: flex;
   flex-direction: column;
@@ -93,20 +93,20 @@
   line-height: 130%;
 }
 
-.item:has(input:checked) [data-category] {
+.item:has(.inputCheck:checked) [data-category] {
   opacity: 0.5;
 }
 
-.item:has(input:checked) {
+.item:has(.inputCheck:checked) {
   background: var(--gray-500);
   border: 1px solid var(--gray-400);
 }
 
-.item:has(input:checked) h3 {
+.item:has(.inputCheck:checked) h3 {
   text-decoration: line-through;
 }
 
-.item:has(input:checked) .col {
+.item:has(.inputCheck:checked) .col {
   opacity: .5;
 }
 
@@ -117,7 +117,7 @@
   color: var(--orange);
 }
 
-.item:has(input:checked) [data-category="fruta"] {
+.item:has(.inputCheck:checked) [data-category="fruta"] {
   background: var(--orange-dark);
 }
 
@@ -126,7 +126,7 @@
   color: var(--yellow);
 }
 
-.item:has(input:checked) [data-category="padaria"] {
+.item:has(.inputCheck:checked) [data-category="padaria"] {
   background: var(--yellow-dark);
 }
 
@@ -135,7 +135,7 @@
   color: var(--green);
 }
 
-.item:has(input:checked) [data-category="legume"] {
+.item:has(.inputCheck:checked) [data-category="legume"] {
   background: var(--green-dark);
 }
 
@@ -144,7 +144,7 @@
   color: var(--blue);
 }
 
-.item:has(input:checked) [data-category="bebida"] {
+.item:has(.inputCheck:checked) [data-category="bebida"] {
   background: var(--blue-dark);
 }
 
@@ -153,6 +153,59 @@
   color: var(--pink);
 }
 
-.item:has(input:checked) [data-category="carne"] {
+.item:has(.inputCheck:checked) [data-category="carne"] {
   background: var(--pink-dark);
+}
+
+/* ITEM BUTTONS*/
+
+.item .buttons svg {
+  display: block;
+  color: var(--gray-100);
+  width: 20px;
+  height: 20px; 
+}
+
+.item .moreButton {
+  cursor: pointer;
+  position: relative;
+}
+
+
+.moreButton input {
+  all: unset;
+  inset: 0;
+  position: absolute;
+}
+
+.item .buttons .modal {
+  display: none;
+  position: absolute;
+  top: -20px;
+}
+
+.buttons:has(:checked) .modal {
+  display: flex;
+}
+
+.buttons:has(:checked) .moreButton svg,
+.buttons:has(:hover) .moreButton svg  {
+  color: var(--purple-light);
+}
+
+.item .modal .editButton {
+  border-radius: 4px 0 0 4px;
+}
+.item .modal .deleteButton {
+  border-radius: 0 4px 4px 0;
+}
+
+.item .modal button {
+  padding: 8px;
+  border: 1px solid var(--gray-300);
+  background: var(--gray-400);
+}
+
+.item .modal button:hover svg {
+  color: var(--purple-light);
 }

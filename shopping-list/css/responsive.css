@@ -1,3 +1,8 @@
+
+@media (max-width: 840px) {
+  .item .buttons .modal {right: 4px;}
+}
+
 @media (max-width: 586px) {
   form {
     flex-wrap: wrap;
