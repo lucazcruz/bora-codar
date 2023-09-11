@@ -77,20 +77,37 @@
 }
 
 #category-select:has(.options-view-button:checked) + #options {
-  display: block;
-}
-
-#options {
-  display: none;
+  position: absolute;
+  top: auto; right: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  
   margin-top: 4px;
-
   background: var(--gray-400);
   border-radius: 6px;
   border: 1px solid var(--gray-300);
 
-  position: absolute;
   z-index: 2;
   width: 100%;
+}
+
+#options {
+  /* SR-ONLY */
+  position: absolute;
+  top: 25px;
+  right: 50%;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .option {
