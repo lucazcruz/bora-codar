@@ -14,114 +14,115 @@
 </head>
 <body>
 
- 
-  <div id="app">
-    <header>
-      <h1>Lista de Compras</h1>
-      <form>
-        <div class="input">
-          <label for="item-name">Item</label>
-          <input type="text" name="item" id="item-name" required>
-        </div>
-        <div class="unit">
-          <label for="unities">Quantidade</label>
-
-          <div class="field">
-            <input type="text" id="unities" name="unities" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-            <div class="select" id="unities-select">
-              <div id="category-select">
-                <input type="checkbox" class="options-view-button">
-            
-                <div id="select-button">
-                  <div class="selected-value">UN.</div>
-            
-                  <div id="chevrons">
-                    <i data-lucide="chevron-down"></i>
-                    <i data-lucide="chevron-up"></i>
+  <div class="bg-container">
+    <div id="app">
+      <header>
+        <h1>Lista de Compras</h1>
+        <form>
+          <div class="input">
+            <label for="item-name">Item</label>
+            <input type="text" name="item" id="item-name" required>
+          </div>
+          <div class="unit">
+            <label for="unities">Quantidade</label>
+  
+            <div class="field">
+              <input type="text" id="unities" name="unities" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+              <div class="select" id="unities-select">
+                <div id="category-select">
+                  <input type="checkbox" class="options-view-button">
+              
+                  <div id="select-button">
+                    <div class="selected-value">UN.</div>
+              
+                    <div id="chevrons">
+                      <i data-lucide="chevron-down"></i>
+                      <i data-lucide="chevron-up"></i>
+                    </div>
                   </div>
                 </div>
-              </div>
-            
-              <ul id="options">
-                <li class="option">
-                  <input type="radio" name="unitType" value="UN." data-label="Unidade" checked>
-                  <span>Un.</span>
-                  <i data-lucide="check"></i>
-                </li>
-            
-                <li class="option">
-                  <input type="radio" name="unitType" value="L" data-label="Litro">
-                  <span>L</span>
-                  <i data-lucide="check"></i>
-                </li>
-            
-                <li class="option">
-                  <input type="radio" name="unitType" value="kg" data-label="Kilograma">
-                  <span>Kg</span>
-                  <i data-lucide="check"></i>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="select">
-          <div id="category-select">
-            <label for="options-view-button">Categoria</label>
-            <input type="checkbox" id="options-view-button" class="options-view-button">
-      
-            <div id="select-button">
-              <div class="selected-value">Selecione</div>
-      
-              <div id="chevrons">
-                <i data-lucide="chevron-down"></i>
-                <i data-lucide="chevron-up"></i>
+              
+                <ul id="options">
+                  <li class="option">
+                    <input type="radio" name="unitType" value="UN." data-label="Unidade" checked>
+                    <span>Un.</span>
+                    <i data-lucide="check"></i>
+                  </li>
+              
+                  <li class="option">
+                    <input type="radio" name="unitType" value="L" data-label="Litro">
+                    <span>L</span>
+                    <i data-lucide="check"></i>
+                  </li>
+              
+                  <li class="option">
+                    <input type="radio" name="unitType" value="kg" data-label="Kilograma">
+                    <span>Kg</span>
+                    <i data-lucide="check"></i>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-      
-          <ul id="options">
-            <li class="option">
-              <input type="radio" name="category" value="Padaria" data-label="Padaria">
-              <i data-lucide="sandwich"></i>
-              <span>Padaria</span>
-              <i data-lucide="check"></i>
-            </li>
-      
-            <li class="option">
-              <input type="radio" name="category" value="Legume" data-label="Legume">
-              <i data-lucide="carrot"></i>
-              <span>Legume</span>
-              <i data-lucide="check"></i>
-            </li>
-      
-            <li class="option">
-              <input type="radio" name="category" value="Carne" data-label="Carne">
-              <i data-lucide="beef"></i>
-              <span>Carne</span>
-              <i data-lucide="check"></i>
-            </li>
-      
-            <li class="option">
-              <input type="radio" name="category" value="Fruta" data-label="Fruta">
-              <i data-lucide="apple"></i>
-              <span>Fruta</span>
-              <i data-lucide="check"></i>
-            </li>
-            <li class="option">
-              <input type="radio" name="category" value="Bebida" data-label="Bebida">
-              <i data-lucide="milk"></i>
-              <span>Bebida</span>
-              <i data-lucide="check"></i>
-            </li>
-          </ul>
-        </div>
-        <button type="submit" class="submit-button">
-          <i data-lucide="plus"></i>
-        </button>
-      </form>
-    </header>
-
-    <main></main>
+          <div class="select">
+            <div id="category-select">
+              <label for="options-view-button">Categoria</label>
+              <input type="checkbox" id="options-view-button" class="options-view-button">
+        
+              <div id="select-button">
+                <div class="selected-value">Selecione</div>
+        
+                <div id="chevrons">
+                  <i data-lucide="chevron-down"></i>
+                  <i data-lucide="chevron-up"></i>
+                </div>
+              </div>
+            </div>
+  
+            <ul id="options">
+              <li class="option">
+                <input type="radio" name="category" value="Padaria" data-label="Padaria">
+                <i data-lucide="sandwich"></i>
+                <span>Padaria</span>
+                <i data-lucide="check"></i>
+              </li>
+        
+              <li class="option">
+                <input type="radio" name="category" value="Legume" data-label="Legume">
+                <i data-lucide="carrot"></i>
+                <span>Legume</span>
+                <i data-lucide="check"></i>
+              </li>
+        
+              <li class="option">
+                <input type="radio" name="category" value="Carne" data-label="Carne">
+                <i data-lucide="beef"></i>
+                <span>Carne</span>
+                <i data-lucide="check"></i>
+              </li>
+        
+              <li class="option">
+                <input type="radio" name="category" value="Fruta" data-label="Fruta">
+                <i data-lucide="apple"></i>
+                <span>Fruta</span>
+                <i data-lucide="check"></i>
+              </li>
+              <li class="option">
+                <input type="radio" name="category" value="Bebida" data-label="Bebida">
+                <i data-lucide="milk"></i>
+                <span>Bebida</span>
+                <i data-lucide="check"></i>
+              </li>
+            </ul>
+          </div>
+          <button type="submit" class="submit-button">
+            <i data-lucide="plus"></i>
+          </button>
+        </form>
+      </header>
+  
+      <main></main>
+    </div>
   </div>
 
   <script src="https://unpkg.com/lucide@latest"></script>

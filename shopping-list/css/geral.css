@@ -1,9 +1,17 @@
 body {
   background: var(--gray-500);
-  background-image: url('../assets/bg.png');
-  background-repeat: no-repeat;
-  background-position: top left;
-  padding: 15px;
+  min-height: 100vh;
+}
+
+.bg-container {
+  background: url('../assets/bg.png') no-repeat top left;
+  max-width: 1440px;
+  width: 100%;
+  padding: 88px 15px 40px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
 }
 
 input[type="checkbox"] {
@@ -28,7 +36,6 @@ input[type="checkbox"] {
   flex-direction: column;
   max-width: 720px;
   width: 100%;
-  margin: 88px auto 0;
 }
 
 #app h1 {
