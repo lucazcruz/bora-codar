@@ -29,7 +29,7 @@ class ShoppingList {
     item.innerHTML = `  
       <div class="flex g-16">
         <div class="checkbox">
-          <input type="checkbox" ${checked}>
+          <input type="checkbox" class="inputCheck" ${checked}>
           <i data-lucide="check"></i>
         </div>
         <div class="col">
@@ -137,5 +137,6 @@ class ShoppingList {
   }
 }
 
-const shoppingList = new ShoppingList();
-shoppingList.init();
+  const shoppingList = new ShoppingList();
+  shoppingList.init();
+  
