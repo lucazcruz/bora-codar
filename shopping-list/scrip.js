@@ -38,7 +38,7 @@ class ShoppingList {
         </div>
       </div>
       <div class="flex g-12">
-        <span data-category="${formData.category}" >
+        <span data-category="${formData.category.toLowerCase()}" >
           ${formData.category}
         </span>
         <button class="moreButton">
