@@ -88,7 +88,7 @@ class ShoppingList {
   }
 
   loadData() {
-    // this.main.innerHTML= "";
+    this.main.innerHTML= "";
     const data = this.getData();
     data.forEach((element, index) => {
       const item = this.createItem(element);
