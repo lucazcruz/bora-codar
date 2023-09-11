@@ -85,6 +85,7 @@ form .input {
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.42px;
+  outline: none;
 }
 
 .input:has(:focus) label {
@@ -92,7 +93,8 @@ form .input {
 }
 
 .input input:focus {
-  outline: 1px solid var(--purple-light);
+  border-color: var(--purple-light);
+
 }
 
 .unit {
@@ -113,6 +115,7 @@ form .input {
   border-radius: 6px 0px 0px 6px;
   border: 1px solid var(--gray-300);
   padding: 12px;
+  outline: none;
 
   color: var(--gray-100);
   font-family: Inter;
@@ -124,7 +127,7 @@ form .input {
 }
 
 .unit .field input[type="text"]:focus {
-  outline: 1px solid var(--purple-light);
+  border-color: var(--purple-light);
 }
 
 #app .submit-button {
@@ -137,6 +140,10 @@ form .input {
 
 .submit-button:hover {
   background: var(--purple-dark);
+}
+
+.submit-button:focus {
+  outline-color: var(--purple-light);
 }
 
 .submit-button svg{

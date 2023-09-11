@@ -33,7 +33,7 @@
   border: 1px solid var(--gray-300);
   border-radius: 6px;
   padding: 12px;
-
+  outline: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,7 +64,8 @@
 
 .options-view-button:focus + #select-button,
 .options-view-button:checked + #select-button {
-  outline: 1px solid var(--purple-light);
+  border-color: var(--purple-light);
+
 }
 
 #category-select:has(.options-view-button:checked) #chevrons [data-lucide="chevron-down"] {
@@ -78,6 +79,7 @@
 #category-select:has(.options-view-button:checked) + #options {
   display: block;
 }
+
 #options {
   display: none;
   margin-top: 4px;
@@ -125,7 +127,7 @@
 }
 
 .option:has(input:focus) {
-  outline: 1px solid var(--purple-light);
+  border-color: var(--purple-light);
 }
 
 .option:has(input:checked) [data-lucide="check"] {
@@ -146,7 +148,6 @@
 
 #unities-select #select-button {
   border-radius: 0px 6px 6px 0px;
-  border-left: none;
 }
 
 #unities-select #options span {
