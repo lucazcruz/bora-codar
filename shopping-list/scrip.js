@@ -1,9 +1,15 @@
 class ShoppingList {
   constructor() {
     this.form = document.forms[0];
+    this.selects = this.form.querySelectorAll(".select")
+    this.unitiesSelected = this.form.querySelector("#unities-select .selected-value")
     this.main = document.querySelector("main");
+    this.body = document.body;
 
     this.addNewItem = this.addNewItem.bind(this);
+    this.changeOptions = this.changeOptions.bind(this);
+    this.outClick = this.outClick.bind(this);
+    this.accessibility = this.accessibility.bind(this);
   }
 
   getData() {
@@ -81,8 +87,40 @@ class ShoppingList {
     lucide.createIcons();
   }
 
+  changeOptions({ target, currentTarget}) {
+    const seletedValue = currentTarget.querySelector(".selected-value")
+    if (target.value !== 'on') {
+      seletedValue.innerText = target.value;
+    }
+  }
+
+  accessibility({ key }) {
+      this.selects.forEach(select => {
+      const viewbutton = select.querySelector(".options-view-button")
+      if (key === " " || key === "Escape" || !select.contains(document.activeElement)) {
+        viewbutton.checked = false;
+      }
+    })
+  }
+
+  outClick({ target }) {
+    this.selects.forEach(select => {
+      const viewbutton = select.querySelector(".options-view-button")
+      if (!select.contains(target) && viewbutton.checked) {
+        viewbutton.checked = false;
+      }
+    })
+  }
+
   init() {
     this.form.addEventListener("submit", this.addNewItem);
+    this.selects.forEach(select => {
+      select.addEventListener("change", this.changeOptions);
+    })
+
+    this.form.addEventListener("keyup", this.accessibility);
+    this.body.addEventListener("click", this.outClick)
+
     this.loadData();
   }
 }
