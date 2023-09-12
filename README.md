@@ -328,5 +328,14 @@
             <a href="https://lucazcruz.github.io/bora-codar/gerador-de-ticket/"><img width="300px" src="./gerador-de-ticket/screenshot.png" /></a>
           </td>
         </tr>
+         <tr>
+          <td>34</td>
+          <td>
+            <a href="shopping-list">Shopping List</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/shopping-list/"><img width="300px" src="./shopping-list/screenshot.png" /></a>
+          </td>
+        </tr>
     </tbody>
 </table></p>
