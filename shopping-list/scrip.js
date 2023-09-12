@@ -74,9 +74,10 @@ class ShoppingList {
     this.loadData();
   }
 
-  isChecked(index) {
-    const data = this.getData();
+  isChecked({ target }, index) {
+    if (!target.classList.contains("inputCheck")) return;
 
+    const data = this.getData();
     if (data[index].checked) {
       data[index].checked = false;
       this.saveData(data);
@@ -92,7 +93,7 @@ class ShoppingList {
     const data = this.getData();
     data.forEach((element, index) => {
       const item = this.createItem(element);
-      item.addEventListener("change", (e) => this.isChecked(index))
+      item.addEventListener("change", (e) => this.isChecked(e, index))
       this.main.appendChild(item)
     });
 
