@@ -88,12 +88,20 @@ class ShoppingList {
     this.saveData(data);
   }
 
+  deleteItem(index) {
+    const data = this.getData();
+    data.splice(index, 1);
+    this.saveData(data);
+    this.loadData();
+  }
+
   loadData() {
     this.main.innerHTML= "";
     const data = this.getData();
     data.forEach((element, index) => {
       const item = this.createItem(element);
       item.addEventListener("change", (e) => this.isChecked(e, index))
+      item.querySelector(".deleteButton").addEventListener("click", () => this.deleteItem(index));
       this.main.appendChild(item)
     });
 
