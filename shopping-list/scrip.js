@@ -43,7 +43,12 @@ class ShoppingList {
           ${formData.category}
         </span>
         <div class="right">
-          <i data-lucide="more-vertical"></i>
+          <div class="draggable">
+            <i data-lucide="more-vertical"></i>
+          </div>
+          <button class="delete-button">
+            <i data-lucide="trash-2"></i>
+          </button>
         </div>
       </div>
     `
@@ -77,7 +82,7 @@ class ShoppingList {
     this.saveData(data);
   }
 
-  select(e) {
+  selectItem(e) {
     const itemCheckbox = e.currentTarget.querySelector('input[type="checkbox"]');
     if (itemCheckbox === e.target) return;
 
@@ -92,13 +97,28 @@ class ShoppingList {
     e.currentTarget.classList.add("selected");
   }
 
+  deleteItem(e, index) {
+    const deleteButton = e.currentTarget.querySelector(".delete-button");
+    if (!deleteButton.contains(e.target)) return;
+
+    const data = this.getData();
+    data.splice(index, 1);
+    this.saveData(data);
+    this.loadData();
+  }
+
+  itemActions(e, index) {
+    this.selectItem(e);
+    this.deleteItem(e, index);
+  }
+
   loadData() {
     this.main.innerHTML= "";
     const data = this.getData();
     data.forEach((element, index) => {
       const item = this.createItem(element);
       item.addEventListener("change", (e) => this.isChecked(e, index))
-      item.addEventListener("click", (e) => this.select(e))
+      item.addEventListener("click", (e) => this.itemActions(e, index))
       this.main.appendChild(item)
     });
 
