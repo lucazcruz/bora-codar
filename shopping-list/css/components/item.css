@@ -167,6 +167,15 @@
 
 /* ACTIONS */
 
+.item .draggable {
+  cursor: grab;
+}
+
+.item.dragging {
+  opacity: .4;
+  transition: all .2s;
+}
+
 .item .delete-button {
   display: none;
 }
