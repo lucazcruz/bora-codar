@@ -201,7 +201,7 @@ class ShoppingList {
   }
 
   init() {
-    this.form.onsubmit = (e) => this.addNewItem();
+    this.form.onsubmit = (e) => this.addNewItem(e);
     this.selects.forEach(select => {
       select.addEventListener("change", this.changeOptions);
     })
