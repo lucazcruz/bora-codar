@@ -95,6 +95,38 @@ class ShoppingList {
     this.loadData();
   }
 
+  saveEdit(e, index) {
+    e.preventDefault();
+    const formPrototype = new FormData(this.form);
+    const formData = Object.fromEntries(formPrototype);
+
+    const data = this.getData()
+    data[index] = formData;
+    this.saveData(data);
+    this.loadData();
+
+    this.form.addEventListener("submit", this.addNewItem);
+  }
+
+  editItem(index) {
+    const data = this.getData();
+    const types = {
+      "UN.": "Unidade",
+      "L": "Litro",
+      "kg": "Kilograma"
+    }
+    
+    const unitType = types[data[index].unitType];
+
+    this.form["item-name"].value = data[index].item;
+    this.form.unities.value = data[index].unities;
+    this.form.querySelector(`[data-label='${unitType}']`).click()
+    this.form.querySelector(`[data-label='${data[index].category}']`).click()
+
+    this.form.removeEventListener("submit", this.addNewItem);
+    this.form.onsubmit = (e) => this.saveEdit(e, index);
+  }
+
   loadData() {
     this.main.innerHTML= "";
     const data = this.getData();
@@ -102,6 +134,7 @@ class ShoppingList {
       const item = this.createItem(element);
       item.addEventListener("change", (e) => this.isChecked(e, index))
       item.querySelector(".deleteButton").addEventListener("click", () => this.deleteItem(index));
+      item.querySelector(".editButton").addEventListener("click", () => this.editItem(index));
       this.main.appendChild(item)
     });
 
