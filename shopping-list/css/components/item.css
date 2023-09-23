@@ -157,55 +157,9 @@
   background: var(--pink-dark);
 }
 
-/* ITEM BUTTONS*/
-
-.item .buttons svg {
+.item .right svg {
   display: block;
   color: var(--gray-100);
   width: 20px;
   height: 20px; 
-}
-
-.item .moreButton {
-  cursor: pointer;
-  position: relative;
-}
-
-
-.moreButton input {
-  all: unset;
-  inset: 0;
-  position: absolute;
-}
-
-.item .buttons .modal {
-  display: none;
-  position: absolute;
-  top: -20px;
-}
-
-.buttons:has(:checked) .modal {
-  display: flex;
-}
-
-.buttons:has(:checked) .moreButton svg,
-.buttons:has(:hover) .moreButton svg  {
-  color: var(--purple-light);
-}
-
-.item .modal .editButton {
-  border-radius: 4px 0 0 4px;
-}
-.item .modal .deleteButton {
-  border-radius: 0 4px 4px 0;
-}
-
-.item .modal button {
-  padding: 8px;
-  border: 1px solid var(--gray-300);
-  background: var(--gray-400);
-}
-
-.item .modal button:hover svg {
-  color: var(--purple-light);
 }
