@@ -3,9 +3,8 @@ class ShoppingList {
     this.body = document.body;
     this.main = document.querySelector("main");
     this.form = document.forms[0];
-
+    this.button = this.form.querySelector(".submit-button");
     this.selects = this.form.querySelectorAll(".select")
-    this.unitiesSelected = this.form.querySelector("#unities-select .selected-value")
 
     this.addNewItem = this.addNewItem.bind(this);
     this.changeOptions = this.changeOptions.bind(this);
@@ -107,9 +106,48 @@ class ShoppingList {
     this.loadData();
   }
 
+  saveEdit(e, index) {
+    e.preventDefault();
+    const formPrototype = new FormData(this.form);
+    const formData = Object.fromEntries(formPrototype);
+
+    const data = this.getData()
+    data[index] = formData;
+    this.saveData(data);
+    this.loadData();
+
+    this.form.addEventListener("submit", this.addNewItem);
+
+    this.button.innerHTML= `<i data-lucide="plus"></i>`;
+    lucide.createIcons();
+  }
+
+  editItem(e, index) {
+    const data = this.getData();
+    const types = {
+      "UN.": "Unidade",
+      "L": "Litro",
+      "kg": "Kilograma"
+    }
+
+    const unitType = types[data[index].unitType];
+
+    this.form["item-name"].value = data[index].item;
+    this.form.unities.value = data[index].unities;
+    this.form.querySelector(`[data-label='${unitType}']`).click()
+    this.form.querySelector(`[data-label='${data[index].category}']`).click()
+
+    this.button.innerHTML= `<i data-lucide="pencil"></i>`;
+    lucide.createIcons();
+
+    this.form.removeEventListener("submit", this.addNewItem);
+    this.form.onsubmit = (e) => this.saveEdit(e, index);
+  }
+
   itemActions(e, index) {
     this.selectItem(e);
     this.deleteItem(e, index);
+    this.editItem(e, index);
   }
 
   loadData() {
