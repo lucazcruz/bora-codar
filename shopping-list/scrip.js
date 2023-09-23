@@ -77,12 +77,28 @@ class ShoppingList {
     this.saveData(data);
   }
 
+  select(e) {
+    const itemCheckbox = e.currentTarget.querySelector('input[type="checkbox"]');
+    if (itemCheckbox === e.target) return;
+
+    if (e.currentTarget.classList.contains("selected")) {
+      e.currentTarget.classList.remove("selected")
+      return
+    }
+
+    this.items = this.main.querySelectorAll(".item");
+    this.items.forEach(item => item.classList.remove("selected"));
+
+    e.currentTarget.classList.add("selected");
+  }
+
   loadData() {
     this.main.innerHTML= "";
     const data = this.getData();
     data.forEach((element, index) => {
       const item = this.createItem(element);
       item.addEventListener("change", (e) => this.isChecked(e, index))
+      item.addEventListener("click", (e) => this.select(e))
       this.main.appendChild(item)
     });
 

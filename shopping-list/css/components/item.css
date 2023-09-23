@@ -8,6 +8,11 @@
   justify-content: space-between;
   padding: 16px;
   position: relative;
+  cursor: pointer;
+}
+
+.item.selected {
+  outline: 1.5px solid var(--purple-light);
 }
 
 .item h3 {
