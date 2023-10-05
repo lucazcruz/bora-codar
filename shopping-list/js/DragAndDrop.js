@@ -3,14 +3,18 @@ export default class DragAndDrop {
     this.main = document.querySelector("main");
 
     this.onDragover = this.onDragover.bind(this);
+    this.onDragstart = this.onDragstart.bind(this);
+    this.onDragend = this.onDragend.bind(this);
   }
 
   onDragstart({ target }) {
-    target.classList.add("dragging");
+    target.closest(".item").classList.add("dragging");
+    this.main.addEventListener("touchmove", this.onDragover);
   }
 
   onDragend({ target }) {
-    target.classList.remove("dragging");
+    target.closest(".item").classList.remove("dragging");
+    this.main.removeEventListener("touchmove", this.onDragover);
   }
 
   getNewPosition(posY) {
@@ -35,6 +39,7 @@ export default class DragAndDrop {
     const dragging = this.main.querySelector(".dragging");
     const applyAfter = this.getNewPosition(posY);
 
+    console.log(applyAfter)
     if (applyAfter) {
       applyAfter.insertAdjacentElement("afterend", dragging);
     } else {
@@ -43,13 +48,15 @@ export default class DragAndDrop {
   }
 
   addEvents() {
-    document.addEventListener("dragstart", this.onDragstart);
-    document.addEventListener("dragend", this.onDragend);
+    const dragButtons = this.main.querySelectorAll(".item .draggable");
+    this.main.addEventListener("dragstart", this.onDragstart);
+    this.main.addEventListener("dragend", this.onDragend);
     this.main.addEventListener("dragover", this.onDragover);
 
-    document.addEventListener("touchstart", this.onDragstart);
-    document.addEventListener("touchend", this.onDragend);
-    this.main.addEventListener("touchmove", this.onDragover);
+    dragButtons.forEach(dragButton => {
+      dragButton.addEventListener("touchstart", this.onDragstart);
+      dragButton.addEventListener("touchend", this.onDragend);
+    })
   }
 
   init() {

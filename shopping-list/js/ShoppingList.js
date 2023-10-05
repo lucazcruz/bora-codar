@@ -19,7 +19,6 @@ export default class ShoppingList {
   createItem(formData) {
     const item = document.createElement("div");
     item.classList.add("item");
-    item.setAttribute("draggable", true);
 
     const checked = formData.checked ? "checked" : "";
     item.innerHTML = `  
@@ -38,7 +37,7 @@ export default class ShoppingList {
           ${formData.category}
         </span>
         <div class="right">
-          <div class="draggable">
+          <div class="draggable" draggable="true">
             <i data-lucide="more-vertical"></i>
           </div>
           <button class="delete-button">
