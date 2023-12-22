@@ -5,7 +5,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-img {
+img, svg {
   display: block;
   width: 100%;
 }
@@ -20,13 +20,20 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+}
+
+.backButton {
+  position: absolute;
+  left: 24px; top: 72px;
+
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #FAFAFA;
 }
 
 #app {
-  margin-top: 80px;
-
-
   max-width: 410px;
   width: 100%;
   position: relative;
@@ -55,7 +62,6 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 
 .form h3 {
@@ -64,7 +70,6 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
-
   margin-bottom: 8px;
 }
 
@@ -106,20 +111,82 @@ body {
   background: var(--brand-purple, #685ED9);
 }
 
-form textarea {
+
+/* STAR-RATE */
+
+.review .star-rate p {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--Base-gray-300, #75747A);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.star-rate .stars {
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars span {
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.stars span:hover {
+  border-radius: 999px;
+  background: var(--Rating-yellow-light, #FAF2E7);
+}
+
+.stars span:hover svg path {
+  fill: #F5D9AD;
+}
+
+.stars span.selected svg path {
+  fill: url(#gradient-yellow);
+}
+
+
+.review, .comment {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; 
+}
+
+.comment {
+  gap: 24px;
+}
+
+.comment textarea {
+  color: var(--Base-gray-500, #0C0C0D);
   background: var(--base-gray-200, #E3E1E4);
+  border: 1px solid transparent;
   border-radius: 8px;
   height: 120px;
-  padding: 12px;
   width: 100%;
-
-  overflow: hidden;
-  color: var(--base-gray-300, #75747A);
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  padding: 12px;
+  resize: none;
 
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+}
+
+.comment textarea::placeholder {
+  color: var(--base-gray-300, #75747A);
+}
+
+.comment textarea:focus {
+  outline: none;
+  border: 1px solid var(--Brand-purple, #685ED9);
+}
+
+.hide {
+  display: none;
 }
