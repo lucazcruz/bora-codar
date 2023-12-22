@@ -338,6 +338,15 @@
           </td>
         </tr>
         <tr>
+          <td>39</td>
+          <td>
+            <a href="shopping-list">Avaliação de Produtos</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/avaliacao-de-produtos/"><img width="300px" src="./avaliacao-de-produtos/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
           <td>40</td>
           <td>
             <a href="newsletter-page">Newsletter Page</a>
