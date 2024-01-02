@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.primary-button {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 16px;
+  background: var(--primary, #3BAB1E);
+  box-shadow: 0px 8px 24px 0px rgba(59, 171, 30, 0.25);
+  cursor: pointer;
+  color: var(--text-cta, #FDFDFD);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.secondary-button {
+  padding: 8px;
+  border-radius: 80px;
+  background: var(--background, #D8EED2);
+  box-shadow: 0px 8px 16px 0px rgba(59, 171, 30, 0.25);
+  width: 40px;
+  height: 40px;
+}
+
+.heading1 {
+  color: var(--text-primary, #242424);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+}
+.heading2 {
+  color: var(--text-primary, #242424);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+.heading3 {
+  color: var(--text-primary, #242424);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+body {
+  background: var(--background, #D8EED2);
+
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  position: relative;
+  max-width: 360px;
+  width: 100%;
+
+  color: var(--text-primary, #242424);
+  text-align: right;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.top-info {
+  position: absolute;
+  width: 100%;
+  padding: 16px 16px 24px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish-image {
+  width: 280px;
+  margin: auto;
+  margin-top: -16px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+
+.container {
+  padding: 240px 32px 32px;
+
+  border-radius: 32px 32px 0 0;
+  background: var(--surface, #FDFDFD);
+  margin-top: 104px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main-info {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.main-info div {
+  width: 136px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.graph > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.graph .scale {
+  display: flex;
+  gap: 8px;
+}
+
+.graph .scale .rectangle {
+  height: 8px;
+  flex: 1 0 0;
+  border-radius: 80px;
+  background: var(--surface-element, #B1DDA5);
+}
+
+.graph .scale .rectangle.active {
+  border-radius: 80px;
+  background: var(--primary, #3BAB1E);
+}
+
+.container .primary-button {
+  margin-top: 8px;
+}

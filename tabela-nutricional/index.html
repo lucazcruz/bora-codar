@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Tabela Nutricional</title>
+</head>
+<body>
+  <main id="app">
+
+    <div class="top-info">
+      <div class="nav">
+        <button class="secondary-button back-button">
+          <img src="./assets/arrow-left.svg" alt="arrow-left image">
+        </button>
+        <button class="secondary-button love-button">
+          <img src="./assets/heart.svg" alt="heart image">
+        </button>
+      </div>
+
+      <div class="dish-image">
+        <img src="./assets/dish1.png" alt="dish image">
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="heading1">Salada variada</h1>
+      <div class="main-info flex-sb">
+        <div>
+          <h3 class="heading3">Energia</h3>
+          <span>221,15 kcal</span>
+        </div>
+        <div>
+          <h3 class="heading3">Porção total</h3>
+          <span>240g</span>
+        </div>
+      </div>
+      <div class="graph">
+        <div class="protein">
+          <div class="table-row flex-sb">
+            <p class="heading3">Proteínas</p>
+            <span>15,13 g</span>
+          </div>
+          <div class="scale">
+            <span class="rectangle active"></span>
+            <span class="rectangle active"></span>
+            <span class="rectangle active"></span>
+            <span class="rectangle"></span>
+            <span class="rectangle"></span>
+          </div>
+        </div>
+        <div class="carbs">
+          <div class="table-row flex-sb">
+            <p class="heading3">Carboidratos</p>
+            <span>18,40 g</span>
+          </div>
+          <div class="scale">
+            <span class="rectangle active"></span>
+            <span class="rectangle active"></span>
+            <span class="rectangle active"></span>
+            <span class="rectangle"></span>
+            <span class="rectangle"></span>
+          </div>
+        </div>
+        <div class="sugar">
+          <div class="table-row flex-sb">
+            <p class="heading3">Açúcar</p>
+            <span>4,88 g</span>
+          </div>
+          <div class="scale">
+            <span class="rectangle active"></span>
+            <span class="rectangle"></span>
+            <span class="rectangle"></span>
+            <span class="rectangle"></span>
+            <span class="rectangle"></span>
+          </div>
+        </div>
+        <div class="fat">
+          <div class="table-row flex-sb">
+            <p class="heading3">Gorduras</p>
+            <span>5,18 g</span>
+          </div>
+          <div class="scale">
+            <span class="rectangle active"></span>
+            <span class="rectangle"></span>
+            <span class="rectangle"></span>
+            <span class="rectangle"></span>
+            <span class="rectangle"></span>
+          </div>
+        </div>
+      </div>
+
+      <button class="primary-button">Mais detalhes</button>
+    </div>
+  </main>
+</body>
+</html>
