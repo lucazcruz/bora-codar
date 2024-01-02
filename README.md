@@ -338,6 +338,15 @@
           </td>
         </tr>
         <tr>
+          <td>37</td>
+          <td>
+            <a href="shopping-list">App de Sono Para Smartwatch</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/app-de-sono-para-smartwatch/"><img width="300px" src="./app-de-sono-para-smartwatch/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
           <td>39</td>
           <td>
             <a href="shopping-list">Avaliação de Produtos</a>
