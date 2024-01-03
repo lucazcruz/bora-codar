@@ -20,13 +20,13 @@
         <button class="secondary-button back-button">
           <img src="./assets/arrow-left.svg" alt="arrow-left image">
         </button>
-        <button class="secondary-button love-button">
+        <button class="secondary-button favorite-button" data-filled="false">
           <img src="./assets/heart.svg" alt="heart image">
         </button>
       </div>
 
       <div class="dish-image">
-        <img src="./assets/dish1.png" alt="dish image">
+        <img src="./assets/dish1.png" alt="dish image" draggable="false">
       </div>
     </div>
 
@@ -97,8 +97,93 @@
         </div>
       </div>
 
-      <button class="primary-button">Mais detalhes</button>
+      <button class="primary-button more-button">Mais detalhes</button>
+    </div>
+
+    <div class="more-details">
+      <span class="slider"></span>
+      <h2 class="heading2">Mais detalhes</h2>
+      <ul class="nutritional-table flex-column-g20">
+        <li class="flex-sb">
+          <h3 class="heading3">Energia</h3>
+          <span>221,15 kcal</span>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Proteínas</h3>
+          <span>15,13 kcal</span>
+        </li>
+        <li class="flex-column-g20">
+          <div class="flex-sb">
+            <h3 class="heading3">Carboidratos</h3>
+            <span>18,40 kcal</span>
+          </div>
+          <ul class="mg-left flex-column-g20">
+            <li class="flex-sb ">
+              <p>Fibra Alimentar</p>
+              <span>5,83 g</span>
+            </li>
+            <li class="flex-sb ">
+              <p>Açúcar</p>
+              <span>4,88 g</span>
+            </li>
+          </ul>
+        </li>
+        <li class="flex-column-g20">
+          <div class="flex-sb">
+            <h3 class="heading3">Gorduras Totais</h3>
+            <span>5,18 kcal</span>
+          </div>
+          <ul class="mg-left flex-column-g20">
+            <li class="flex-sb ">
+              <p>Gorduras Saturadas</p>
+              <span>0,86 g</span>
+            </li>
+            <li class="flex-sb ">
+              <p>Gorduras Trans</p>
+              <span>0 mg g</span>
+            </li>
+          </ul>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Colesterol</h3>
+          <span>0 mg</span>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Sódio</h3>
+          <span>243,03 mg</span>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Potássio</h3>
+          <span>291,85 mg</span>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Cálcio</h3>
+          <span>49,02 mg</span>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Ferro</h3>
+          <span>2,91 mg</span>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Magnésio</h3>
+          <span>48,23 mg</span>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Vitamina C</h3>
+          <span>29,49 mg</span>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Vitamina D</h3>
+          <span>24,88 mg</span>
+        </li>
+        <li class="flex-sb">
+          <h3 class="heading3">Vitamina B6</h3>
+          <span>32,40 mg</span>
+        </li>
+      </ul>
     </div>
   </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>

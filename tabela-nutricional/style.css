@@ -1,8 +1,22 @@
+:root {
+  --primary: #3BAB1E;
+  --secondary: #DE215A;
+  --background: #D8EED2;
+  --surface: #FDFDFD;
+  --surface-element: #B1DDA5;
+  --text-primary: #242424;
+  --text-cts: #FDFDFD;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style: none;
 }
 
 button {
@@ -86,6 +100,9 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+
+  overflow: hidden;
+  user-select: none;
 }
 
 .top-info {
@@ -144,7 +161,6 @@ body {
   gap: 12px;
 }
 
-
 .graph .scale {
   display: flex;
   gap: 8px;
@@ -164,4 +180,64 @@ body {
 
 .container .primary-button {
   margin-top: 8px;
+}
+
+.mask {
+  filter: blur(4px);
+}
+
+.more-details {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 16px 32px 32px;
+  border-radius: 32px 32px 0px 0px;
+  background: var(--surface, #FDFDFD);
+  box-shadow: 0px -8px 40px 0px rgba(0, 0, 0, 0.25);
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.more-details .slider {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 8px;
+  border-radius: 80px;
+  background: var(--surface-element, #B1DDA5);
+  cursor: pointer;
+}
+
+.flex-column-g20 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mg-left {
+  margin-left: 16px;
+}
+
+.more-details.active {
+  display: flex;
+  animation: showUp ease-in .8s;
+}
+
+
+#app:has(.more-details.active) .top-info {
+  filter: blur(3px);
+  transition: filter 2s;
+}
+
+
+@keyframes showUp {
+  from {
+    transform: translateY(704px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }

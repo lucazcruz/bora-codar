@@ -338,6 +338,15 @@
           </td>
         </tr>
         <tr>
+          <td>36</td>
+          <td>
+            <a href="shopping-list">Tabela Nutricional</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/tabela-nutricional/"><img width="300px" src="./tabela-nutricional/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
           <td>37</td>
           <td>
             <a href="shopping-list">App de Sono Para Smartwatch</a>
