@@ -338,6 +338,15 @@
           </td>
         </tr>
         <tr>
+          <td>35</td>
+          <td>
+            <a href="shopping-list">Reminder Beber Água</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/reminder-beber-agua/"><img width="300px" src="./reminder-beber-agua/screenshot.png" /></a>
+          </td>
+        </tr>
+        <tr>
           <td>36</td>
           <td>
             <a href="shopping-list">Tabela Nutricional</a>

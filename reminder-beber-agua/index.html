@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./style.css">
+  <title>Reminder Beber Água</title>
+</head>
+<body>
+  <main id="app">
+    <header>
+      <img src="./assets/avatar.png" alt="avatar do perfil">
+      <div>
+        <p>Boa tarde,</br>
+          <b>
+            Lucas
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+              <path d="M0.871349 11.0237C0.871349 11.0237 0.0843249 9.87652 1.23218 9.09018C2.37865 8.30385 3.16498 9.45033 3.16498 9.45033L6.81575 14.7746C6.94159 14.5646 7.07925 14.3574 7.2329 14.153L2.16591 6.76455C2.16591 6.76455 1.37958 5.61808 2.52674 4.83174C3.67321 4.04541 4.45954 5.19189 4.45954 5.19189L9.22549 12.1424C9.40278 11.9977 9.58424 11.8524 9.77126 11.7099L4.2461 3.6512C4.2461 3.6512 3.45977 2.50472 4.60693 1.71839C5.7534 0.932056 6.53973 2.07853 6.53973 2.07853L12.0649 10.1358C12.2679 10.0114 12.4688 9.90363 12.6705 9.78961L7.50613 2.2586C7.50613 2.2586 6.7198 1.11213 7.86627 0.325794C9.01274 -0.46054 9.79907 0.685936 9.79907 0.685936L15.2596 8.64939L16.0897 9.86053C12.6496 12.2202 12.3221 16.6594 14.2876 19.526C14.6804 20.0996 15.254 19.7067 15.254 19.7067C12.895 16.2659 13.6153 12.3996 17.0561 10.0406L16.0417 4.96384C16.0417 4.96384 15.6628 3.62617 16.9998 3.24656C18.3374 2.86765 18.7171 4.20532 18.7171 4.20532L19.8886 7.68438C20.353 9.06376 20.8473 10.4383 21.5015 11.7384C23.3488 15.4094 22.2455 19.9716 18.7622 22.3612C14.9627 24.9663 9.76848 23.9979 7.16268 20.199L0.871349 11.0237Z" fill="#FFDC5D"/>
+            </svg>
+          </b>
+        </p>
+      </div>
+    </header>
+    <div class="content">
+      <div class="card">
+        <p class="percentage">80%</p>
+
+        <img src="./assets/water.svg" alt="imagem de um copo com água">
+        <h2>Beber água</h2>
+        <p class="meta">Meta: 3L</p>
+      </div>
+
+      <div class="temp">
+        <div>
+          <p>Meta Diária <span>3000ml</span></p>
+          <input type="range" min="100" max="3000" step="100">
+        </div>
+        <div>
+          <p>Quantidade por timer <span>300ml</span></p>
+          <input type="range" min="100" max="300" step="100">
+        </div>
+
+        <div class="timer">
+          <div class="block">
+            <input type="text" maxlength="2">
+            <span>h</span>
+          </div>
+          <span>:</span>
+          <div class="block">
+            <input type="text" maxlength="2">
+            <span>m</span>
+          </div>
+        </div>
+
+        <button class="start-button">
+          Começar
+          <img src="./assets/arrow-right.svg" alt="imagem de seta para a direita">
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
