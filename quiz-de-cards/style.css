@@ -1,0 +1,206 @@
+:root {
+  --grey-1: #D9D9D9;
+  --grey-2: #565E6D;
+  --grey-3: #252C3A;
+  --grey-4: #1D2330;
+  --grey-5: #181D28;
+  --grey-6: #161A24;
+
+  --green-light: #ABF770;
+  --green-dark: #5CAD1D;
+  --red-light: #F77070;
+  --red-dark: #AB3030;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+svg {
+  display: block;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  background: linear-gradient(129deg, #996DFF 8.18%, #633BBC 95.51%);
+}
+
+#app {
+  padding: 64px 110px;
+  background: var(--grey-6, #161A24);
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+
+  max-width: 1060px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 69px;
+}
+
+#app header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#app header p {
+  color: var(--grey-1, #D9D9D9);
+  font-family: Sora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+#app header .score {
+  padding: 12px 20px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--green-light, #ABF770);
+  background: var(--grey-4, #1D2330);
+
+  color: var(--green-light, #ABF770);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+#app .question {
+  max-width: 410px;
+  margin: 0 auto;
+
+  color: var(--grey-1, #D9D9D9);
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+#app .cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards .card {
+  cursor: pointer;
+  background: var(--grey-4, #1D2330);
+  padding: 46px 32px;
+
+  border-radius: 8px;
+  border-top: 3.194px solid var(--grey-3, #252C3A);
+  border-right: 3.194px solid var(--grey-3, #252C3A);
+  border-bottom: 6.387px solid var(--grey-3, #252C3A);
+  border-left: 3.194px solid var(--grey-3, #252C3A);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  max-width: 250px;
+  width: 100%;
+  position: relative;
+}
+
+.card p {
+  color: var(--grey-1, #D9D9D9);
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+
+#app footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#app footer p {
+  color: var(--grey-1, #D9D9D9);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 3.6px;
+}
+
+#app footer p span {
+  font-size: 20px;
+}
+
+#app footer button.skip {
+  background: var(--grey-3, #252C3A);
+  padding: 10px;
+  border-radius: 999px;
+}
+
+
+/* QUIZ CSS */
+
+input {
+  all: unset;
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+}
+
+.cards .card:has(input.answer:checked),
+.cards:has(input:checked) .card:has(input.answer) {
+  border-color: var(--green-light, #ABF770);
+}
+
+.cards .card:has(input:checked) {
+  border-color: var(--red-light, #F77070);
+}
+
+.cards .feedback {
+  position: absolute;
+  top: 13px; right: 13px;
+  height: 24px;
+  width: 24px;
+  border-radius: 27px;
+  border: 3px solid var(--grey-2, #565E6D);
+}
+
+.cards .feedback svg {
+  display: none;
+}
+
+.card:has(input:checked) .feedback {
+  border-color: var(--red-light, #F77070);
+  background: var(--red-light, #F77070);
+}
+
+.card:has(input.answer:checked) .feedback,
+.cards:has(input:checked) .card:has(input.answer) .feedback {
+  border-color: var(--green-light, #ABF770);
+  background: var(--green-light, #ABF770);
+}
+
+.card:has(input:checked) .feedback svg,
+.cards:has(input:checked) .card:has(input.answer) .feedback svg {
+  display: block;
+}

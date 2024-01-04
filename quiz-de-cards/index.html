@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <title>Quiz de Cards</title>
+</head>
+<body>
+  <main id="app">
+    <header>
+      <p>👋 <b>Quiz</b>Time</p>
+      <div class="score">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 13L9 17L19 7" stroke="#ABF770" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>3</span>
+      </div>
+    </header>
+
+    <p class="question">Qual era o objetivo da personagem?</p>
+
+    <form class="cards">
+      <div class="card">
+        <div class="feedback">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M5.06873 12.9319L9.0007 8.99997M9.0007 8.99997L12.9326 5.06799M9.0007 8.99997L5.06873 5.06799M9.0007 8.99997L12.9326 12.9319" stroke="#AB3030" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <input type="radio" name="question4">
+        <img src="./assets/image1.png" alt="ilustração de pirata pisando em cima de um baú de tesouros">
+        <p>Caçar Tesouros</p>
+      </div>
+      <div class="card">
+        <input type="radio" name="question4" class="answer">
+        <div class="feedback">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M3.75 9.75L6.75 12.75L14.25 5.25" stroke="#5CAD1D" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <img src="./assets/image2.png" alt="ilustração lendo livros">
+        <p>Ter mais tempo para ler livros</p>
+      </div>
+      <div class="card">
+        <input type="radio" name="question4">
+        <div class="feedback">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M5.06873 12.9319L9.0007 8.99997M9.0007 8.99997L12.9326 5.06799M9.0007 8.99997L5.06873 5.06799M9.0007 8.99997L12.9326 12.9319" stroke="#AB3030" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <img src="./assets/image3.png" alt="ilustração segurando o timão de um navio pirata">
+        <p>Navegar pelos 7 mares</p>
+      </div>
+    </form>
+
+    <footer>
+      <p><span>4</span>/5</p>
+      <button class="skip">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+          <path d="M11.5 6L17.5 12L11.5 18" stroke="#565E6D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </footer>
+  </main>
+</body>
+</html>

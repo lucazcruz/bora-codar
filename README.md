@@ -355,6 +355,15 @@
             <a href="https://lucazcruz.github.io/bora-codar/app-de-sono-para-smartwatch/"><img width="300px" src="./app-de-sono-para-smartwatch/screenshot.png" /></a>
           </td>
         </tr>
+         <tr>
+          <td>38</td>
+          <td>
+            <a href="shopping-list">Quiz de Cards</a>
+          </td>
+          <td align="center">
+            <a href="https://lucazcruz.github.io/bora-codar/quiz-de-cards/"><img width="300px" src="./quiz-de-cards/screenshot.png" /></a>
+          </td>
+        </tr>
         <tr>
           <td>39</td>
           <td>
